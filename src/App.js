@@ -19,6 +19,7 @@ class App extends Component {
           >
             here
           </a></p>
+          <a href="http://qhapaqnan.cultura.pe/noticias/proyecto-qhapaq-%C3%B1-premia-escolares-de-cieneguilla">About my awardin the Qhapaq Ñan drawing contest</a>
         </header>
       </div>
     );
