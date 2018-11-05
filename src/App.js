@@ -25,7 +25,7 @@ class App extends Component {
             rel="noopener noreferrer"
             href="http://qhapaqnan.cultura.pe/noticias/proyecto-qhapaq-%C3%B1-premia-escolares-de-cieneguilla"
           >
-          About my awardin the Qhapaq Ñan drawing contest
+          About my Qhapaq Ñan award
           </a>
         </header>
       </div>
