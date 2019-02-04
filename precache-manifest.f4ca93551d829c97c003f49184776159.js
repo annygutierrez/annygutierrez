@@ -8,6 +8,10 @@ self.__precacheManifest = [
     "url": "/static/media/everis.f5345b5b.png"
   },
   {
+    "revision": "c6e6875a95964d077f18b05f9f812830",
+    "url": "/static/media/britanico.c6e6875a.png"
+  },
+  {
     "revision": "6170d17c830b26c3e06bdbef36f38c85",
     "url": "/static/media/avatar.6170d17c.png"
   },
@@ -16,19 +20,19 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "8336d3fc7fdf2cfaf903",
-    "url": "/static/js/main.8336d3fc.chunk.js"
+    "revision": "8273af7b877754691231",
+    "url": "/static/js/main.8273af7b.chunk.js"
   },
   {
-    "revision": "d44403e2ce4e8f848d28",
-    "url": "/static/js/1.d44403e2.chunk.js"
+    "revision": "d68def3b86b6be24fe9d",
+    "url": "/static/js/1.d68def3b.chunk.js"
   },
   {
-    "revision": "8336d3fc7fdf2cfaf903",
-    "url": "/static/css/main.7bd0bc8e.chunk.css"
+    "revision": "8273af7b877754691231",
+    "url": "/static/css/main.6f902498.chunk.css"
   },
   {
-    "revision": "84f236b640918db59d7ea49d89d201a3",
+    "revision": "978d3d6ae4a5de1d5030098aec6f6fe6",
     "url": "/index.html"
   }
 ];
