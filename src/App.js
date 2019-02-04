@@ -3,6 +3,8 @@ import avatar from './assets/avatar.png';
 import america from './assets/americatv.png';
 import telefonica from './assets/telefonica.png';
 import everis from './assets/everis.png';
+import laboratoria from './assets/laboratoria.png';
+import britanico from './assets/britanico.png';
 import './App.css';
 
 class App extends Component {
@@ -50,7 +52,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Medium
+            Medium Blog
           </a>
           <a
             className="App-link"
@@ -120,6 +122,30 @@ class App extends Component {
             </p>
             </div>
             <img src={telefonica} className="america" alt="america" />
+          </div>
+
+          <div className="educationBox">
+            <h2 className="experienceTitle">Edu<span className="orange">cation</span></h2>
+            <div className="circle"></div>
+            <p className="position">Front-end developer</p>
+            <p className="place">Laboratoria</p>
+            <p><span className="tools">Javascript</span> . <span className="tools">Materialize</span> . <span className="tools">Bootstrap</span> . <span className="tools">React.js</span> . <span className="tools">Git</span></p>
+            <div className="aboutBox">
+              <p className="aboutText">
+              Laboratoria is a social enterprise that empowers young women from low-income backgrounds by giving them access to education and work in the digital sector.
+            </p>
+            </div>
+            <img src={laboratoria} className="america" alt="america" />
+            <div className="circle"></div>
+            <p className="position">English</p>
+            <p className="place">El Britanico</p>
+            <p><span className="tools">English</span></p>
+            <div className="aboutBox">
+              <p className="aboutText">
+              English intermediate level one.
+            </p>
+            </div>
+            <img src={britanico} className="america" alt="america" />
           </div>
         </main>
       </div>
