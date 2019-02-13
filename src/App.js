@@ -112,16 +112,6 @@ class App extends Component {
             </p>
             </div>
             <img src={everis} className="america" alt="america" />
-            <div className="circle"></div>
-            <p className="position">Front-end developer</p>
-            <p className="place">Telefónica</p>
-            <p><span className="tools">React Native</span></p>
-            <div className="aboutBox">
-              <p className="aboutText">
-              We develop applications to improve the accessibility of information in the workplace.
-            </p>
-            </div>
-            <img src={telefonica} className="america" alt="america" />
           </div>
 
           <div className="educationBox">
