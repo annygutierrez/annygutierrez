@@ -82,7 +82,7 @@ class App extends Component {
             className="App-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.reddit.com/user/annygutierrez3"
+            href="https://www.reddit.com/user/annygutierrez"
           >
             Reddit
           </a>
