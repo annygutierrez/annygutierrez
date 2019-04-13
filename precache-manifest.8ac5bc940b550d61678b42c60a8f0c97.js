@@ -1,5 +1,9 @@
 self.__precacheManifest = [
   {
+    "revision": "93dfe2cf0668215bc417812fc6b28edf",
+    "url": "/static/media/unu.93dfe2cf.png"
+  },
+  {
     "revision": "a9e364e062142bc361868344c50cd022",
     "url": "/static/media/telefonica.a9e364e0.png"
   },
@@ -20,19 +24,19 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "eb815d18404884a71715",
-    "url": "/static/js/main.eb815d18.chunk.js"
+    "revision": "389837cb52881093563c",
+    "url": "/static/js/main.389837cb.chunk.js"
   },
   {
-    "revision": "47798bceb41e04f34b2c",
-    "url": "/static/js/1.47798bce.chunk.js"
+    "revision": "d68def3b86b6be24fe9d",
+    "url": "/static/js/1.d68def3b.chunk.js"
   },
   {
-    "revision": "eb815d18404884a71715",
-    "url": "/static/css/main.27d658aa.chunk.css"
+    "revision": "389837cb52881093563c",
+    "url": "/static/css/main.0a3935a2.chunk.css"
   },
   {
-    "revision": "d1b7472250638efa591d35a45395e08a",
+    "revision": "c14fb4cc0104876f14afdc779ec7f904",
     "url": "/index.html"
   }
 ];
