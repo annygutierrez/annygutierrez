@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import avatar from './assets/avatar.png';
 import america from './assets/americatv.png';
 import telefonica from './assets/telefonica.png';
+import unu from './assets/unu.png';
 import everis from './assets/everis.png';
 import laboratoria from './assets/laboratoria.png';
 import britanico from './assets/britanico.png';
@@ -126,6 +127,16 @@ class App extends Component {
             </p>
             </div>
             <img src={laboratoria} className="america" alt="america" />
+            <div className="circle"></div>
+            <p className="position">Computer and systems engineering</p>
+            <p className="place">National University of Ucayali</p>
+            <p><span className="tools">Computer Engineering</span> . <span className="tools">Math</span></p>
+            <div className="aboutBox">
+              <p className="aboutText">
+              The National University of Ucayali is one of the main universities of Peru, located in the department of Ucayali.
+            </p>
+            </div>
+            <img src={unu} className="unu" alt="unu" />
             <div className="circle"></div>
             <p className="position">English</p>
             <p className="place">El Britanico</p>
