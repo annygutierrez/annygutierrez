@@ -4,7 +4,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: red;
+    border-bottom: 1px solid #E5E5E5;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,8 +22,20 @@
     height: 80%;
 }
 
-@media (max-width: 499px) {
+.MobileOnly {
+    display: none;
+}
+
+@media (max-width: 425px) {
     .DesktopOnly {
         display: none;
+    }
+
+    .Toolbar {
+        border-bottom: none;
+    }
+
+    .MobileOnly {
+        display: inline-block;
     }
 }
