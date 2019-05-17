@@ -13,7 +13,10 @@ const toolbar = (props) => (
             <NavigationItems />
         </nav>
         <div className={classes.MobileOnly}>
-            <DrawerToggle clicked={props.drawerToggleClicked} />
+            <DrawerToggle
+              clicked={props.drawerToggleClicked}
+              active={props.drawerToggleActive}
+            />
         </div>
     </header>
 );

@@ -1,0 +1,25 @@
+.DrawerToggle {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+}
+
+.menuText {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.ActiveText {
+  color: white;
+}
+
+.icon {
+    color: #2476FA;
+    font-size: 12px;
+}
+
+.Close {
+    background-color: #201E00;
+}
