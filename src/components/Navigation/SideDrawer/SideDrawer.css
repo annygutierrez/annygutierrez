@@ -10,21 +10,25 @@
     margin-top: 60px;
 }
 
+.Open {
+    display: block;
+  }
+  
+  .Close {
+      display: none;
+  }
+  
+  .Logo {
+      height: 11%;
+      margin-bottom: 32px;
+  }
+
 @media (min-width: 500px) {
     .SideDrawer {
         display: none;
     }
-}
 
-.Open {
-  display: block;
-}
-
-.Close {
-    display: none;
-}
-
-.Logo {
-    height: 11%;
-    margin-bottom: 32px;
+    .Open {
+        display: none;
+    }
 }
