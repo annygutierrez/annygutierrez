@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './DrawerToggle.css';
 
 const drawerToggle = (props) => {
+  const toggleIcon = props.active ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
   const containerClasses = [classes.DrawerToggle];
   let toggleText = 'Menu';
   const textClasses = [classes.menuText]
@@ -14,7 +15,7 @@ const drawerToggle = (props) => {
     <div className={containerClasses.join(' ')}>
       <div onClick={props.clicked} className={textClasses.join(' ')}>{toggleText}</div>
       <span className={classes.icon}>
-        <i className="fas fa-arrow-down"></i>
+        <i className={toggleIcon}></i>
       </span>
     </div>
   );

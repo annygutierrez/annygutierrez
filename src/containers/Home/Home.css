@@ -1,0 +1,21 @@
+.Home {
+    margin-top: 60px;
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.MainTitle {
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: #333;
+    margin-top: 50px;
+}
+
+.MainParagraph {
+    display: flex;
+    text-align: center;
+}
