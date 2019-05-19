@@ -18,4 +18,21 @@
 .MainParagraph {
     display: flex;
     text-align: center;
+    margin: 5px 12px;
+}
+
+.SpotlightContainer {
+    width: 100vw;
+    background-color: black;
+    margin-top: 20px;
+}
+
+.SpotlightContent {
+    font-size: 22px;
+    color: white;
+    margin: 1em 24px;
+}
+
+.SpotlightImage {
+    max-width: 100%
 }

@@ -39,6 +39,12 @@ class Home extends Component {
         <p className={classes.MainParagraph}>
           Front-end Developer with substantial experience building bridge movile applications and javascript.
         </p>
+        <div className={classes.SpotlightContainer}>
+          <img className={classes.SpotlightImage} src="https://user-images.githubusercontent.com/32302890/57985994-e3306b00-7a34-11e9-8725-c466ef84c48a.png" alt="post-image" />
+          <p className={classes.SpotlightContent}>
+            This is the Hackathon of gender equility, 720 minutes to find a creative solution for three big problems, teams of programmers in four Latin American countries working together.
+          </p>
+        </div>
       </div>
     );
   }
