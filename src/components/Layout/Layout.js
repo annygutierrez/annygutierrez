@@ -8,6 +8,38 @@ class Layout extends Component {
     showSideDrawer: false
   }
 
+  /**
+   * Bind the function in the constructor to create just one instance of the function.
+   */
+  constructor() {
+    super();
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  /**
+   * Calculate & Update state of new dimensions
+   */
+  updateDimensions() {
+    if (window.innerWidth > 500) {
+      this.setState({ showSideDrawer: false });
+    }
+  }
+
+  /**
+   * Add event listener
+   */
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  /**
+   * Remove event listener
+   */
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
   sideDrawerClosedHandler = () => {
     this.setState({ showSideDrawer: false });
   }
