@@ -62,6 +62,7 @@
 .SpotlightItem {
     display: flex;
     flex-direction: row;
+    width: 100%;
     border-top-width: 1px;
     border-top-color: #404040;
     border-style: solid;
