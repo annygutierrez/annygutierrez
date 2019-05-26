@@ -44,6 +44,39 @@ class Home extends Component {
           <p className={classes.SpotlightContent}>
             This is the Hackathon of gender equility, 720 minutes to find a creative solution for three big problems, teams of programmers in four Latin American countries working together.
           </p>
+          <p className={classes.DateText}>Apr 12, 2019</p>
+          <p className={classes.RecentSpotlightsTitle}>Recent Spotlights</p>
+          <div className={classes.VerticalLine}></div>
+          <div className={classes.SpotlightItem}>
+            <div className={classes.SpotlightTitleCont}>
+              <p className={classes.SpotlightTitle}>Hackathon Laboratoria 2018 - I</p>
+            </div>
+            <div className={classes.SpotlightDateCont}>
+              <p className={classes.SpotlightDate}>Apr 12</p>
+            </div>
+          </div>
+          <div className={classes.SpotlightItem}>
+            <div className={classes.SpotlightTitleCont}>
+              <p className={classes.SpotlightTitle}>Hackathon Laboratoria 2018 - I</p>
+            </div>
+            <div className={classes.SpotlightDateCont}>
+              <p className={classes.SpotlightDate}>Apr 12</p>
+            </div>
+          </div>
+          <div className={classes.SpotlightItem}>
+            <div className={classes.SpotlightTitleCont}>
+              <p className={classes.SpotlightTitle}>Hackathon Laboratoria 2018 - I</p>
+            </div>
+            <div className={classes.SpotlightDateCont}>
+              <p className={classes.SpotlightDate}>Apr 12</p>
+            </div>
+          </div>
+
+        </div>
+        <div className={classes.HomeFooter}>
+          <p className={classes.FooterTitle}>Laboratoria - UNU</p>
+          <p className={classes.FooterDescription}><a>Barranco</a>, <a>Lima</a>, <a>LI</a>, <a>Perú</a></p>
+          <p className={classes.FooterDescription}><a>Pucallpa</a>, <a>Ucayali</a>, <a>Perú</a></p>
         </div>
       </div>
     );

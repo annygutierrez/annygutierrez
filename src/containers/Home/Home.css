@@ -1,11 +1,9 @@
 .Home {
-    margin-top: 60px;
     display: flex;
     padding: 0 24px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .MainTitle {
@@ -18,13 +16,17 @@
 .MainParagraph {
     display: flex;
     text-align: center;
-    margin: 5px 12px;
+    margin: 5px 12px 30px 12px;
 }
 
 .SpotlightContainer {
     width: 100vw;
     background-color: black;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .SpotlightContent {
@@ -35,4 +37,90 @@
 
 .SpotlightImage {
     max-width: 100%
+}
+
+.RecentSpotlightsTitle {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
+    line-height: 10px;
+}
+
+.VerticalLine {
+    background-color: #2476FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 2px;
+    height: 20px;
+}
+
+.SpotlightItem {
+    display: flex;
+    flex-direction: row;
+    border-top-width: 1px;
+    border-top-color: #404040;
+    border-style: solid;
+}
+
+.SpotlightTitle {
+    color: white;
+    word-break: break-word;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.FooterDescription {
+    color: #333;
+    font-size: 13px;
+    display: flex;
+}
+
+.FooterTitle {
+    color: #333;
+    font-size: 13px;
+    display: flex;
+    font-weight: 600;
+    align-self: flex-start;
+    background-color: red;
+    text-align: left;
+}
+
+.HomeFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+.SpotlightDateCont {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SpotlightTitleCont {
+    display: flex;
+    flex: 3;
+    padding: 0 10px;
+}
+
+.SpotlightDate {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.DateText {
+    color: white;
+    margin: 0 24px;
+    display: flex;
+    align-self: flex-start;
 }
