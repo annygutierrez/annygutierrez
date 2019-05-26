@@ -79,22 +79,29 @@
 .FooterDescription {
     color: #333;
     font-size: 13px;
+    line-height: 0px;
+    margin-bottom: 4px;
     display: flex;
 }
 
 .FooterTitle {
     color: #333;
     font-size: 13px;
-    display: flex;
     font-weight: 600;
-    align-self: flex-start;
-    background-color: red;
+    display: flex;
+    line-height: 0px;
+    margin-bottom: 4px;
+    justify-content: center;
+    flex-direction: column;
     text-align: left;
 }
 
 .HomeFooter {
     display: flex;
+    justify-content: flex-start;
+    width: 100%;
     flex-direction: column;
+    margin: 24px 0;
 }
 
 .SpotlightDateCont {
@@ -116,6 +123,11 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+.FooterLink {
+    text-decoration: underline;
+    color: #333;
 }
 
 .DateText {

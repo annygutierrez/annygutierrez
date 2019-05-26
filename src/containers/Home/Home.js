@@ -73,11 +73,11 @@ class Home extends Component {
           </div>
 
         </div>
-        <div className={classes.HomeFooter}>
+        <footer className={classes.HomeFooter}>
           <p className={classes.FooterTitle}>Laboratoria - UNU</p>
-          <p className={classes.FooterDescription}><a>Barranco</a>, <a>Lima</a>, <a>LI</a>, <a>Perú</a></p>
-          <p className={classes.FooterDescription}><a>Pucallpa</a>, <a>Ucayali</a>, <a>Perú</a></p>
-        </div>
+          <p className={classes.FooterDescription}><a href={'/'} className={classes.FooterLink}> Barranco</a>, <a href={'/'} className={classes.FooterLink}> Lima</a>, <a href={'/'} className={classes.FooterLink}> LI</a>, <a href={'/'} className={classes.FooterLink}> Perú</a></p>
+          <p className={classes.FooterDescription}><a href={'/'} className={classes.FooterLink}> Pucallpa</a>, <a href={'/'} className={classes.FooterLink}> Ucayali</a>, <a href={'/'} className={classes.FooterLink}> Perú</a></p>
+        </footer>
       </div>
     );
   }
