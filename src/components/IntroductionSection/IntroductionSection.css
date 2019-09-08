@@ -1,0 +1,91 @@
+.Introduction {
+    margin-top: 4em;
+    display: flex;
+    width: 43vw;
+    position: fixed;
+    left: 0px;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.InputDesign {
+    color: #717171;
+    background-color: transparent;
+}
+
+.search {
+    width: 1.7em;
+    height: 1.7em;
+    margin-right: 1.3em;
+}
+
+.Avatar {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.MainTitle {
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: #333;
+    margin-top: 50px;
+}
+
+.Input {
+    width: 20vw;
+    height: 4em;
+    padding-left: 1em;
+    background-color: #fff;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);
+}
+
+.MainParagraph {
+    display: flex;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #4C5544;
+    text-align: center;
+    margin: 20px 12px 0px 12px;
+}
+
+.vr {
+    width:1px;
+    background-color:#4C5544;
+    height: 1.7em;
+    border: none;
+}
+
+
+@media (max-width: 500px) {
+
+    .Introduction {
+        display: flex;
+        margin-top: 0em;
+        width: 100vw;
+        position: relative;
+        left: 0px;
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Input {
+        width: 80vw;
+        height: 3.5em;
+        padding-left: 1em;
+        background-color: #fff;
+        margin-top: -10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);
+    }
+
+}

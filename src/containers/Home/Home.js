@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import SocialMediaTab from '../../components/UI/SocialMediaTab/SocialMeciaTab';
 import classes from './Home.css';
-import avatar from '../../assets/avatar_group.jpg';
-import search from '../../assets/search.svg';
+import DrawerToggle from '../../components/Navigation/SideDrawer/DrawerToggle/DrawerToggle';
+import FooterDescription from '../../components/FooterDescription/FooterDescription';
+import IntroductionSection from '../../components/IntroductionSection/IntroductionSection';
+import SpotlightSection from '../../components/SpotlightSection/SpotlightSection';
 
 
 class Home extends Component {
   state = {
+    showMenu: false,
+    intervalId: 0,
+    thePosition: false,
     socialMedia: [
       {
         icon: 'fab fa-facebook-square',
@@ -34,67 +38,65 @@ class Home extends Component {
       }
     ]
   }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 170) {
+        this.setState({ thePosition: true })
+      } else {
+        this.setState({ thePosition: false })
+      }
+    });
+    window.scrollTo(0, 0);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  onScrollStep = () => {
+    if (window.pageYOffset === 0) {
+      clearInterval(this.state.intervalId);
+    }
+    window.scroll(0, window.pageYOffset - "10");
+  }
+
+  handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > 70) {
+      this.setState({ showMenu: true });
+    } else {
+      this.setState({ showMenu: false });
+    }
+  };
+
+  scrollToTop = () => {
+    let intervalId = setInterval(this.onScrollStep.bind(this), "16.66");
+    this.setState({ intervalId: intervalId });
+  }
+
+
   render() {
+    const containerClasses = [classes.menuBtn];
+    if (this.state.showMenu) {
+      containerClasses.push(classes.menu2);
+    }
     return (
       <div className={classes.Home}>
-      <div className={classes.MainContainer}>
-
-      <div className={classes.Introduction}>
-          <img src={avatar} alt="avatar" className={classes.Avatar} />
-          <p className={classes.MainTitle}>Anny Gutierrez</p>
-          <SocialMediaTab icons={this.state.socialMedia} />
-          <p className={classes.MainParagraph}>
-            Front-end Developer
-        </p>
-          <hr className={classes.vr}></hr>
-          <div className={classes.Input}>
-            <img src={search} className={classes.search} />
+        {this.state.showMenu && (
+          <div className={containerClasses.join(' ')}>
+            <DrawerToggle
+              clicked={() => this.scrollToTop()}
+              active={false}
+            />
           </div>
+        )}
+        <div className={classes.MainContainer}>
+          <IntroductionSection socialMedia={this.state.socialMedia} />
+          <SpotlightSection />
         </div>
-
-
-        <div className={classes.SpotlightContainer}>
-          <img className={classes.SpotlightImage} src="https://user-images.githubusercontent.com/32302890/57985994-e3306b00-7a34-11e9-8725-c466ef84c48a.png" alt="post-image" />
-          <p className={classes.SpotlightContent}>
-            This is the Hackathon of gender equility, 720 minutes to find a creative solution for three big problems, teams of programmers in four Latin American countries working together.
-          </p>
-          <p className={classes.DateText}>Apr 12, 2019</p>
-          <p className={classes.RecentSpotlightsTitle}>Recent Spotlights</p>
-          <div className={classes.VerticalLine}></div>
-          <div className={classes.SpotlightItem}>
-            <div className={classes.SpotlightTitleCont}>
-              <p className={classes.SpotlightTitle}>Blockchain</p>
-            </div>
-            <div className={classes.SpotlightDateCont}>
-              <p className={classes.SpotlightDate}>Apr 12</p>
-            </div>
-          </div>
-          <div className={classes.SpotlightItem}>
-            <div className={classes.SpotlightTitleCont}>
-              <p className={classes.SpotlightTitle}>Tokenization</p>
-            </div>
-            <div className={classes.SpotlightDateCont}>
-              <p className={classes.SpotlightDate}>Apr 12</p>
-            </div>
-          </div>
-          <div className={classes.SpotlightItem}>
-            <div className={classes.SpotlightTitleCont}>
-              <p className={classes.SpotlightTitle}>Identidad Digital</p>
-            </div>
-            <div className={classes.SpotlightDateCont}>
-              <p className={classes.SpotlightDate}>Apr 12</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-        
-        <footer className={classes.HomeFooter}>
-          <p className={classes.FooterTitle}>Laboratoria - UNU</p>
-          <p className={classes.FooterDescription}><a href={'/'} className={classes.FooterLink}> Barranco</a>, <a href={'/'} className={classes.FooterLink}> Lima</a>, <a href={'/'} className={classes.FooterLink}> LI</a>, <a href={'/'} className={classes.FooterLink}> Perú</a></p>
-          <p className={classes.FooterDescription}><a href={'/'} className={classes.FooterLink}> Pucallpa</a>, <a href={'/'} className={classes.FooterLink}> Ucayali</a>, <a href={'/'} className={classes.FooterLink}> Perú</a></p>
-        </footer>
+        <FooterDescription />
       </div>
     );
   }

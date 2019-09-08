@@ -1,0 +1,44 @@
+.FooterDescription {
+    color: #333;
+    font-size: 13px;
+    line-height: 0px;
+    margin-bottom: 4px;
+    display: flex;
+}
+
+.FooterTitle {
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    line-height: 0px;
+    margin-bottom: 4px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.FooterLink {
+    text-decoration: underline;
+    color: #333;
+}
+
+@media (min-width: 501px) {
+    .HomeFooter {
+        position: fixed;
+        top: 85vh;
+        display: flex;
+        left: 1.2em;
+        flex-direction: column;
+        margin: 24px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .HomeFooter {
+        display: flex;
+        width: 80vw;
+        padding: 0px;
+        flex-direction: column;
+    }
+}

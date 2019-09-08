@@ -9,232 +9,48 @@
     display: flex;
 }
 
-.Introduction {
-    display: flex;
-    width: 50vw;
+.menuBtn {
     position: fixed;
-    left: 0px;
-    height: 100vh;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
+    top: 0em;
+    left: 35vw;
 }
 
-.Avatar {
-    width: 7em;
-    height: 7em;
-    border-radius: 50%;
-    margin-top: 20px;
+.menu2 {
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 9s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 9s;
 }
 
-.search {
-    width: 1.7em;
-    height: 1.7em;
-}
-
-.vr {
-    width:1px;
-    background-color:#4C5544;
-    height: 1.7em;
-    border: none;
-}
-
-.Input {
-    width: 40vw;
-    height: 3.5em;
-    padding-left: 1em;
-    background-color: #fff;
-    margin-top: -10px;
-    display: flex;
-    align-items: center;
-    box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);
-}
-
-.MainTitle {
-    font-size: 30px;
-    font-family: 'Poppins';
-    color: #333;
-    margin-top: 50px;
-}
-
-.MainParagraph {
-    display: flex;
-    font-size: 16px;
-    line-height: 1.1;
-    color: #4C5544;
-    text-align: center;
-    margin: 20px 12px 0px 12px;
-}
-
-.SpotlightContainer {
-    width: 50vw;
-    background-color: black;
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.SpotlightContent {
-    font-size: 22px;
-    color: white;
-    margin: 1em 24px;
-}
-
-.SpotlightImage {
-    max-width: 100%
-}
-
-.RecentSpotlightsTitle {
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 70px;
-    line-height: 10px;
-}
-
-.VerticalLine {
-    background-color: #2476FA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 2px;
-    height: 20px;
-}
-
-.SpotlightItem {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    border-top-width: 1px;
-    border-top-color: #404040;
-    border-top-style: solid;
-}
-
-.SpotlightTitle {
-    color: white;
-    word-break: break-word;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.FooterDescription {
-    color: #333;
-    font-size: 13px;
-    line-height: 0px;
-    margin-bottom: 4px;
-    display: flex;
-}
-
-.FooterTitle {
-    color: #333;
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    line-height: 0px;
-    margin-bottom: 4px;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.SpotlightDateCont {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.SpotlightTitleCont {
-    display: flex;
-    flex: 3;
-    padding: 0 10px;
-}
-
-.SpotlightDate {
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.FooterLink {
-    text-decoration: underline;
-    color: #333;
-}
-
-.DateText {
-    color: white;
-    margin: 0 24px;
-    display: flex;
-    align-self: flex-start;
-}
-
-@media (min-width: 501px) {
-    .HomeFooter {
-        position: fixed;
-        top: 85vh;
-        display: flex;
-        left: 1.2em;
-        flex-direction: column;
-        margin: 24px 0;
-    }
-}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {color: #333;}
+    25%  {color: #333;}
+    50%  {color: black;}
+    100% {color: black;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    0%   {color: #333;}
+    25%  {color: #333;}
+    50%  {color: black;}
+    100% {color: black;}
+  }
 
 @media (max-width: 500px) {
+
+    .menuBtn {
+        display: none;
+    }
 
     .Home {
         padding: 0px;
         align-items: center; 
     }
 
-    .Introduction {
-        display: flex;
-        width: 100vw;
-        position: relative;
-        left: 0px;
-        height: auto;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .Input {
-        width: 80vw;
-        height: 3.5em;
-        padding-left: 1em;
-        background-color: #fff;
-        margin-top: -10px;
-        display: flex;
-        align-items: center;
-        box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);
-    }
-
-    .SpotlightContainer {
-        width: 100vw;
-        background-color: black;
-        margin-top: 40px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
     .MainContainer {
         flex-direction: column;
     }
-
-    .HomeFooter {
-        display: flex;
-        width: 80vw;
-        padding: 2em 0px;
-        flex-direction: column;
-    }
+    
 }

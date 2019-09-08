@@ -5,13 +5,14 @@
     left: 0;
     top: 0;
     background-color: #264880;
-    padding: 32px 16px;
+    padding: 10px 16px;
     box-sizing: border-box;
     margin-top: 70px;
 }
 
 .Open {
     display: block;
+    z-index: 300;
   }
   
 .Close {

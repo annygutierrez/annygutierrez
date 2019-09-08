@@ -12,8 +12,8 @@ const drawerToggle = (props) => {
     toggleText = 'Close'
   }
   return(
-    <div className={containerClasses.join(' ')}>
-      <div onClick={props.clicked} className={textClasses.join(' ')}>{toggleText}</div>
+    <div onClick={props.clicked} className={containerClasses.join(' ')}>
+      <div className={textClasses.join(' ')}>{toggleText}</div>
       <span className={classes.icon}>
         <i className={toggleIcon}></i>
       </span>
