@@ -1,5 +1,5 @@
 .Toolbar {
-    height: 60px;
+    height: 70px;
     width: 100%;
     top: 0;
     left: 0;
@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 10px;
+    padding: 0px;
     box-sizing: border-box;
     z-index: 90;
 }
@@ -22,16 +22,29 @@
 }
 
 .Logo {
-    height: 80%;
+    position: fixed;
+    height: 3em;
+    left: 1em;
 }
 
 .MobileOnly {
     display: none;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 500px) {
+    .Toolbar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+
     .DesktopOnly {
         display: none;
+    }
+
+    .Logo {
+        position: relative;
     }
 
     .Toolbar {

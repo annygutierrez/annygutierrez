@@ -37,16 +37,22 @@ class Home extends Component {
   render() {
     return (
       <div className={classes.Home}>
-      <img src={avatar} alt="avatar" className={classes.Avatar} />
-        <p className={classes.MainTitle}>Anny Gutierrez</p>
-        <SocialMediaTab icons={this.state.socialMedia} />
-        <p className={classes.MainParagraph}>
-          Front-end Developer
+      <div className={classes.MainContainer}>
+
+      <div className={classes.Introduction}>
+          <img src={avatar} alt="avatar" className={classes.Avatar} />
+          <p className={classes.MainTitle}>Anny Gutierrez</p>
+          <SocialMediaTab icons={this.state.socialMedia} />
+          <p className={classes.MainParagraph}>
+            Front-end Developer
         </p>
-        <hr className={classes.vr}></hr>
-        <div className={classes.Input}>
-          <img src={search} className={classes.search} />
+          <hr className={classes.vr}></hr>
+          <div className={classes.Input}>
+            <img src={search} className={classes.search} />
+          </div>
         </div>
+
+
         <div className={classes.SpotlightContainer}>
           <img className={classes.SpotlightImage} src="https://user-images.githubusercontent.com/32302890/57985994-e3306b00-7a34-11e9-8725-c466ef84c48a.png" alt="post-image" />
           <p className={classes.SpotlightContent}>
@@ -81,6 +87,9 @@ class Home extends Component {
           </div>
 
         </div>
+
+      </div>
+        
         <footer className={classes.HomeFooter}>
           <p className={classes.FooterTitle}>Laboratoria - UNU</p>
           <p className={classes.FooterDescription}><a href={'/'} className={classes.FooterLink}> Barranco</a>, <a href={'/'} className={classes.FooterLink}> Lima</a>, <a href={'/'} className={classes.FooterLink}> LI</a>, <a href={'/'} className={classes.FooterLink}> Perú</a></p>

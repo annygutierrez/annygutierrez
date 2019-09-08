@@ -1,16 +1,30 @@
 .Home {
     display: flex;
-    padding: 0 24px;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
     justify-content: center;
+}
+
+.MainContainer {
+    display: flex;
+}
+
+.Introduction {
+    display: flex;
+    width: 50vw;
+    position: fixed;
+    left: 0px;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .Avatar {
     width: 7em;
     height: 7em;
     border-radius: 50%;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .search {
@@ -26,7 +40,7 @@
 }
 
 .Input {
-    width: 80vw;
+    width: 40vw;
     height: 3.5em;
     padding-left: 1em;
     background-color: #fff;
@@ -53,9 +67,9 @@
 }
 
 .SpotlightContainer {
-    width: 100vw;
+    width: 50vw;
     background-color: black;
-    margin-top: 40px;
+    margin-top: 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -78,7 +92,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 70px;
     line-height: 10px;
 }
 
@@ -98,7 +112,7 @@
     width: 100%;
     border-top-width: 1px;
     border-top-color: #404040;
-    border-style: solid;
+    border-top-style: solid;
 }
 
 .SpotlightTitle {
@@ -128,14 +142,6 @@
     justify-content: center;
     flex-direction: column;
     text-align: left;
-}
-
-.HomeFooter {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    flex-direction: column;
-    margin: 24px 0;
 }
 
 .SpotlightDateCont {
@@ -169,4 +175,66 @@
     margin: 0 24px;
     display: flex;
     align-self: flex-start;
+}
+
+@media (min-width: 501px) {
+    .HomeFooter {
+        position: fixed;
+        top: 85vh;
+        display: flex;
+        left: 1.2em;
+        flex-direction: column;
+        margin: 24px 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .Home {
+        padding: 0px;
+        align-items: center; 
+    }
+
+    .Introduction {
+        display: flex;
+        width: 100vw;
+        position: relative;
+        left: 0px;
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Input {
+        width: 80vw;
+        height: 3.5em;
+        padding-left: 1em;
+        background-color: #fff;
+        margin-top: -10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);
+    }
+
+    .SpotlightContainer {
+        width: 100vw;
+        background-color: black;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .MainContainer {
+        flex-direction: column;
+    }
+
+    .HomeFooter {
+        display: flex;
+        width: 80vw;
+        padding: 2em 0px;
+        flex-direction: column;
+    }
 }
