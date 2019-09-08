@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import SocialMediaTab from '../../components/UI/SocialMediaTab/SocialMeciaTab';
 import classes from './Home.css';
+import avatar from '../../assets/avatar_group.jpg';
+import search from '../../assets/search.svg';
+
 
 class Home extends Component {
   state = {
@@ -34,11 +37,16 @@ class Home extends Component {
   render() {
     return (
       <div className={classes.Home}>
+      <img src={avatar} alt="avatar" className={classes.Avatar} />
         <p className={classes.MainTitle}>Anny Gutierrez</p>
         <SocialMediaTab icons={this.state.socialMedia} />
         <p className={classes.MainParagraph}>
-          Front-end Developer with substantial experience building bridge movile applications and javascript.
+          Front-end Developer
         </p>
+        <hr className={classes.vr}></hr>
+        <div className={classes.Input}>
+          <img src={search} className={classes.search} />
+        </div>
         <div className={classes.SpotlightContainer}>
           <img className={classes.SpotlightImage} src="https://user-images.githubusercontent.com/32302890/57985994-e3306b00-7a34-11e9-8725-c466ef84c48a.png" alt="post-image" />
           <p className={classes.SpotlightContent}>
@@ -49,7 +57,7 @@ class Home extends Component {
           <div className={classes.VerticalLine}></div>
           <div className={classes.SpotlightItem}>
             <div className={classes.SpotlightTitleCont}>
-              <p className={classes.SpotlightTitle}>Hackathon Laboratoria 2018 - I</p>
+              <p className={classes.SpotlightTitle}>Blockchain</p>
             </div>
             <div className={classes.SpotlightDateCont}>
               <p className={classes.SpotlightDate}>Apr 12</p>
@@ -57,7 +65,7 @@ class Home extends Component {
           </div>
           <div className={classes.SpotlightItem}>
             <div className={classes.SpotlightTitleCont}>
-              <p className={classes.SpotlightTitle}>Hackathon Laboratoria 2018 - I</p>
+              <p className={classes.SpotlightTitle}>Tokenization</p>
             </div>
             <div className={classes.SpotlightDateCont}>
               <p className={classes.SpotlightDate}>Apr 12</p>
@@ -65,7 +73,7 @@ class Home extends Component {
           </div>
           <div className={classes.SpotlightItem}>
             <div className={classes.SpotlightTitleCont}>
-              <p className={classes.SpotlightTitle}>Hackathon Laboratoria 2018 - I</p>
+              <p className={classes.SpotlightTitle}>Identidad Digital</p>
             </div>
             <div className={classes.SpotlightDateCont}>
               <p className={classes.SpotlightDate}>Apr 12</p>

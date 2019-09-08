@@ -6,6 +6,36 @@
     justify-content: center;
 }
 
+.Avatar {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.search {
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.vr {
+    width:1px;
+    background-color:#4C5544;
+    height: 1.7em;
+    border: none;
+}
+
+.Input {
+    width: 80vw;
+    height: 3.5em;
+    padding-left: 1em;
+    background-color: #fff;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);
+}
+
 .MainTitle {
     font-size: 30px;
     font-family: 'Poppins';
@@ -15,14 +45,17 @@
 
 .MainParagraph {
     display: flex;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #4C5544;
     text-align: center;
-    margin: 5px 12px 30px 12px;
+    margin: 20px 12px 0px 12px;
 }
 
 .SpotlightContainer {
     width: 100vw;
     background-color: black;
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     flex-direction: column;

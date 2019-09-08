@@ -54,6 +54,7 @@ class Layout extends Component {
     return (
       <Aux>
         <Toolbar
+          fixed={this.state.showSideDrawer}
           drawerToggleClicked={this.sideDrawerToggleHandler}
           drawerToggleActive={this.state.showSideDrawer}
         />

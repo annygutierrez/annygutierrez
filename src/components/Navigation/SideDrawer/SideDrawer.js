@@ -9,8 +9,6 @@ const sideDrawer = (props) => {
   }
   return (
     <div className={attachedClasses.join(' ')}>
-      <div className={classes.Logo}>
-      </div>
       <nav>
         <NavigationItems />
       </nav>
