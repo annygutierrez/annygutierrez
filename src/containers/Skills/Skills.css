@@ -1,0 +1,233 @@
+.MargenTitle {
+    font-size: 30px;
+    color: rgb(12, 20, 59);
+    cursor: vertical-text;
+    padding-left: 5em;
+    margin-top: 0.42em;
+}
+
+.SkillTitle {
+    font-size: 22px;
+}
+
+.SkillDescription {
+    margin-top: -1.7em;
+}
+
+.SkillCardSeparator {
+    width: 1px;
+    height: 4em;
+    background-color: #2476FA;
+}
+
+.SkillTextContainer {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    margin-left: 2em;
+    justify-content: center;
+}
+
+.SkillPicContainer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.SkillCard {
+    display: flex;
+    width: 28vw;
+    margin-bottom: 2em;
+}
+
+.SkillPic {
+    width: 121px;
+    height: 121px;
+}
+
+.separator {
+    width: 1px;
+    height: 4em;
+    background-color: #2476FA;
+    margin-top: 2em;
+}
+
+.SectionTitle {
+    font-size: 28px;
+    margin-right: 6em;
+}
+
+.SectionDescription {
+    font-size: 16px;
+}
+
+.WorkCard {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 4em;
+}
+
+.ExperienceContainer {
+    display: flex;
+    padding-top: 1.5em;
+    flex-direction: column;
+    flex: 1;
+}
+
+.SkillsItems {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0rem;
+    margin: 0;
+    padding: 3em 7em 1em 3em;
+    list-style: none;
+}
+
+.descriptionWork {
+    font-size: 16px;
+    margin-right: 6em;
+    margin-top: 3em;
+    color: #4C5544;
+}
+
+.SkillItem {
+  color: #2476FA;
+  font-weight: 600;
+}
+
+.SkillsContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.ListItems {
+    padding-left: 1.8em;
+    padding-right: 3em;
+    list-style: none;
+}
+
+.companyLogo {
+    width: 121px;
+    height: 121px;
+    margin-left: 3em;
+}
+
+.CompanyContainer {
+    display: flex;
+
+}
+
+.Item {
+    color: #4C5544;
+}
+
+.Item::before {
+    content: "•"; 
+    font-size: 20px;
+    line-height: 0em;
+    color: #2476FA;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+}
+
+.NavContainer {
+   padding-bottom: 2em;
+}
+
+.experienceSubtitle {
+    font-size: 18px;
+    color: #8F95A3;
+    line-height: 0px;
+    margin-top: 0.3em;
+}
+
+.experienceTitle {
+    font-size: 30px;
+    line-height: 0px;
+}
+
+.Slash {
+    color: #2476FA;
+    font-size: 15px;
+}
+
+.CurrentRoute {
+    color: rgb(4, 24, 17);
+}
+
+.Content {
+    position: absolute;
+    padding-top: 7.8em;
+    top: 0px;
+    display: flex;
+    flex: 1;
+    width: 85vw;
+    flex-direction: column;
+    padding-left: 10em;
+}
+
+.CompanyName {
+    font-size: 30px;
+    margin-left: 1em;
+}
+
+.TeamName {
+    margin-left: 1.5em;
+    font-size: 20px;
+    margin-top: -2em; 
+    color: #8F95A3;
+}
+
+.CompanyNameTwo {
+    font-size: 16px;
+}
+
+.RouteTextOne:hover {
+    text-decoration: underline;
+    color: #2476FA;
+}
+
+.RouteTextOne {
+    color: #8F95A3;
+    text-decoration: none;
+}
+
+.NavText {
+    font-size: 16px;
+}
+
+.container {
+    z-index: -1;
+    position: relative;
+}
+
+.PageColorSeparator {
+    width: 8em;
+    height: 2px;
+    margin-left: 2em;
+    background-color: #2476FA;
+    margin-top: 4em;
+}
+
+.PageSeparator {
+    width: 100vw;
+    margin-left: -10em; 
+    height: 1px;
+    margin-bottom: 4em;
+    background-color: #E5E5E5;
+}
+
+.MargenContainer {
+    padding: 0px;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    margin-left: 5rem;
+    z-index: 900;
+    position: relative;
+    height: 100vh;
+    border-top: 1px solid #E5E5E5;
+}

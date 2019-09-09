@@ -12,7 +12,7 @@ const toolbar = (props) => {
     return (
         <header className={containerClasses.join(' ')}>
             <div className={classes.Logo}>
-                <Logo />
+                <Logo width={87}/>
             </div>
             <nav className={classes.DesktopOnly}>
                 <NavigationItems />

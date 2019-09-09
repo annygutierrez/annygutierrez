@@ -59,7 +59,7 @@ class Home extends Component {
     if (window.pageYOffset === 0) {
       clearInterval(this.state.intervalId);
     }
-    window.scroll(0, window.pageYOffset - "10");
+    window.scroll(0, window.pageYOffset - "15");
   }
 
   handleScroll = () => {

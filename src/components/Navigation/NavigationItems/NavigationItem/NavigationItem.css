@@ -6,6 +6,11 @@
     width: 100%;
 }
 
+.active {
+    border-bottom: 2px solid #2476FA;
+    font-weight: 600;
+}
+
 .NavigationItem a {
     border-bottom: 2px solid white;
     color: black;
