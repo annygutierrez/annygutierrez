@@ -6,7 +6,7 @@ import americaLogo from '../../assets/americatv.png';
 
 
 class Experience extends Component {
-
+// Reorganize code
   render() {
     return (
       <div className={classes.container}>
