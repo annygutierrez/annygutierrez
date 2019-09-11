@@ -23,7 +23,7 @@
     color: #333;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 871px) {
     .HomeFooter {
         position: fixed;
         top: 85vh;
@@ -34,11 +34,11 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 870px) {
     .HomeFooter {
         display: flex;
         width: 80vw;
-        padding: 0px;
+        padding: 2.8em 0em;
         flex-direction: column;
     }
 }

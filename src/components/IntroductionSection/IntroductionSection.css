@@ -63,7 +63,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 870px) {
 
     .Introduction {
         display: flex;
@@ -78,11 +78,12 @@
     }
 
     .Input {
-        width: 80vw;
+        width: 14em;
         height: 3.5em;
         padding-left: 1em;
         background-color: #fff;
         margin-top: -10px;
+        margin-bottom: 1em;
         display: flex;
         align-items: center;
         box-shadow: 3px 19px 38px rgba(172, 172, 172,0.30), 3px 10px 29px rgba(172, 172, 172,0.22);

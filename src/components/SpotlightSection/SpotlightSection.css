@@ -51,7 +51,7 @@
 .SpotlightTitleCont {
     display: flex;
     flex: 3;
-    padding: 0 5em;
+    padding: 0 3em;
 }
 
 .SpotlightItem {
@@ -79,7 +79,7 @@
 
 .DateText {
     color: white;
-    margin: 0em 5em;
+    margin: 0em 3.5em;
     display: flex;
     align-self: flex-start;
 }
@@ -87,10 +87,10 @@
 .SpotlightContent {
     font-size: 27px;
     color: white;
-    margin: 2em 3em;
+    margin: 1.3em 2em;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 870px) {
 
     .SpotlightContainer {
         width: 100vw;
@@ -101,5 +101,25 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    .SpotlightContent {
+        font-size: 20px;
+        color: white;
+        margin: 1em 1.5em;
+    }
+
+    .DateText {
+        margin: 0em 2em;
+    }
+
+    .SpotlightTitleCont {
+        padding: 0 2em;
+    }
     
+}
+
+@media (max-width: 476px) {
+    .SpotlightTitleCont {
+        padding: 0 1em;
+    }
 }

@@ -31,13 +31,13 @@
     display: none;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 870px) {
     .Toolbar {
         justify-content: center;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 870px) {
 
     .DesktopOnly {
         display: none;

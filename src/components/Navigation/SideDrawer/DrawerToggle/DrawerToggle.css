@@ -25,7 +25,7 @@
     background-color: #201E00;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 870px) {
     .menuText:hover {
         color: #2476FA;
     }
