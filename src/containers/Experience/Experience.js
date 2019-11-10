@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import classes from './Experience.css';
-import { NavLink } from 'react-router-dom';
 import everisLogo from '../../assets/everis.png';
 import americaLogo from '../../assets/americatv.png';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 
 
 class Experience extends Component {
@@ -14,14 +14,9 @@ class Experience extends Component {
           <p className={classes.MargenTitle}>Experience</p>
         </div>
         <div className={classes.Content}>
-          <div className={classes.NavContainer}>
-            <p className={classes.NavText}>
-              <NavLink exact to="/" className={classes.RouteTextOne}>Home</NavLink>
-              <span className={classes.Slash}> / </span>
-              <span className={classes.CurrentRoute}>Experience</span></p>
-          </div>
-
+          <Breadcrumb />
           <div className={classes.WorkCard}>
+
             <div className={classes.ExperienceContainer}>
               <p className={classes.experienceTitle}>Front-end developer</p>
               <p className={classes.experienceSubtitle}>Blockchain developer</p>
@@ -31,6 +26,7 @@ class Experience extends Component {
                 <li className={classes.Item}>Work with agile methodologies.</li>
               </ul>
             </div>
+
             <div className={classes.SkillsContainer}>
               <div className={classes.CompanyContainer}>
                <div className={classes.separator}></div>
@@ -52,6 +48,7 @@ class Experience extends Component {
                 <li className={classes.SkillItem}>Linux</li>
               </ul>
             </div>
+            
           </div>
           <p className={classes.descriptionWork}>We work on decentralized apps and digital tools projects, based on Blockchain technologies, we seek to be synonymous with disruption in the technological community in Latin America and the world.</p>
         <div className={classes.PageColorSeparator}></div>

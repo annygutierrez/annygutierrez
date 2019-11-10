@@ -10,7 +10,7 @@ const spotlightSection = () => (
     <p className={classes.DateText}>Apr 12, 2019</p>
     <p className={classes.RecentSpotlightsTitle}>Recent Spotlights</p>
     <div className={classes.VerticalLine}></div>
-    <div className={classes.SpotlightItem}>
+    {/* <div className={classes.SpotlightItem}>
       <div className={classes.SpotlightTitleCont}>
         <p className={classes.SpotlightTitle}>Blockchain</p>
       </div>
@@ -33,7 +33,7 @@ const spotlightSection = () => (
       <div className={classes.SpotlightDateCont}>
         <p className={classes.SpotlightDate}>Apr 12</p>
       </div>
-    </div>
+    </div> */}
   </div>
 );
 

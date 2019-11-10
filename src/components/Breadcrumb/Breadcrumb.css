@@ -1,0 +1,27 @@
+.NavContainer {
+    padding-bottom: 2em;
+ }
+
+ .NavText {
+    font-size: 16px;
+}
+
+.RouteTextOne:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #2476FA;
+}
+
+.RouteTextOne {
+    color: #8F95A3;
+    text-decoration: none;
+}
+
+.Slash {
+    color: #2476FA;
+    font-size: 15px;
+}
+
+.CurrentRoute {
+    color: rgb(4, 24, 17);
+}

@@ -59,6 +59,7 @@ class Layout extends Component {
           drawerToggleActive={this.state.showSideDrawer}
         />
         <SideDrawer
+          closeDrawer={this.sideDrawerClosedHandler}
           open={this.state.showSideDrawer}
         />
         <main>
