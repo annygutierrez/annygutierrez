@@ -22,7 +22,7 @@ class Skills extends Component {
             <p className={classes.NavText}>
               <NavLink exact to="/" className={classes.RouteTextOne}>Home</NavLink>
               <span className={classes.Slash}> / </span>
-              <span className={classes.CurrentRoute}>Skiils</span></p>
+              <span className={classes.CurrentRoute}>Skills</span></p>
           </div>
 
           <div className={classes.WorkCard}>
