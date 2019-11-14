@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import classes from './Skills.css';
 import { NavLink } from 'react-router-dom';
 import reactLogo from '../../assets/react.svg';
+import htmlLogo from '../../assets/html.svg';
+import cssLogo from '../../assets/css.svg';
+import gitLogo from '../../assets/git.svg';
+import vueLogo from '../../assets/vue.svg';
+import jsLogo from '../../assets/js.svg';
 
 
 class Skills extends Component {
@@ -42,8 +47,51 @@ class Skills extends Component {
 
            <div className={classes.SkillCard}>
                <div className={classes.SkillTextContainer}>
-                   <p className={classes.SkillTitle}>React Native</p>
-                   <p className={classes.SkillDescription}>Mobile development</p>
+                   <p className={classes.SkillTitle}>HTML</p>
+                   <p className={classes.SkillDescription}>Front-end development</p>
+               </div>
+               <div className={classes.SkillPicContainer}>
+                   <div className={classes.SkillCardSeparator}></div>
+                   <img src={htmlLogo} alt="skill-pic" className={classes.SkillPic}/>
+               </div>
+           </div>
+
+           <div className={classes.SkillCard}>
+               <div className={classes.SkillTextContainer}>
+                   <p className={classes.SkillTitle}>CSS</p>
+                   <p className={classes.SkillDescription}>Front-end development</p>
+               </div>
+               <div className={classes.SkillPicContainer}>
+                   <div className={classes.SkillCardSeparator}></div>
+                   <img src={cssLogo} alt="skill-pic" className={classes.SkillPic}/>
+               </div>
+           </div>
+
+           <div className={classes.SkillCard}>
+               <div className={classes.SkillTextContainer}>
+                   <p className={classes.SkillTitle}>Git</p>
+                   <p className={classes.SkillDescription}>Software development</p>
+               </div>
+               <div className={classes.SkillPicContainer}>
+                   <div className={classes.SkillCardSeparator}></div>
+                   <img src={gitLogo} alt="skill-pic" className={classes.SkillPic}/>
+               </div>
+           </div>
+
+           <div className={classes.SkillCard}>
+               <div className={classes.SkillTextContainer}>
+                   <p className={classes.SkillTitle}>Vue</p>
+                   <p className={classes.SkillDescription}>Front-end development</p>
+               </div>
+               <div className={classes.SkillPicContainer}>
+                   <div className={classes.SkillCardSeparator}></div>
+                   <img src={vueLogo} alt="skill-pic" className={classes.SkillPic}/>
+               </div>
+           </div>
+           <div className={classes.SkillCard}>
+               <div className={classes.SkillTextContainer}>
+                   <p className={classes.SkillTitle}>React.js</p>
+                   <p className={classes.SkillDescription}>Front-end development</p>
                </div>
                <div className={classes.SkillPicContainer}>
                    <div className={classes.SkillCardSeparator}></div>
@@ -53,44 +101,12 @@ class Skills extends Component {
 
            <div className={classes.SkillCard}>
                <div className={classes.SkillTextContainer}>
-                   <p className={classes.SkillTitle}>React Native</p>
-                   <p className={classes.SkillDescription}>Mobile development</p>
+                   <p className={classes.SkillTitle}>Javascript</p>
+                   <p className={classes.SkillDescription}>Front-end development</p>
                </div>
                <div className={classes.SkillPicContainer}>
                    <div className={classes.SkillCardSeparator}></div>
-                   <img src={reactLogo} alt="skill-pic" className={classes.SkillPic}/>
-               </div>
-           </div>
-
-           <div className={classes.SkillCard}>
-               <div className={classes.SkillTextContainer}>
-                   <p className={classes.SkillTitle}>React Native</p>
-                   <p className={classes.SkillDescription}>Mobile development</p>
-               </div>
-               <div className={classes.SkillPicContainer}>
-                   <div className={classes.SkillCardSeparator}></div>
-                   <img src={reactLogo} alt="skill-pic" className={classes.SkillPic}/>
-               </div>
-           </div>
-
-           <div className={classes.SkillCard}>
-               <div className={classes.SkillTextContainer}>
-                   <p className={classes.SkillTitle}>React Native</p>
-                   <p className={classes.SkillDescription}>Mobile development</p>
-               </div>
-               <div className={classes.SkillPicContainer}>
-                   <div className={classes.SkillCardSeparator}></div>
-                   <img src={reactLogo} alt="skill-pic" className={classes.SkillPic}/>
-               </div>
-           </div>
-           <div className={classes.SkillCard}>
-               <div className={classes.SkillTextContainer}>
-                   <p className={classes.SkillTitle}>React Native</p>
-                   <p className={classes.SkillDescription}>Mobile development</p>
-               </div>
-               <div className={classes.SkillPicContainer}>
-                   <div className={classes.SkillCardSeparator}></div>
-                   <img src={reactLogo} alt="skill-pic" className={classes.SkillPic}/>
+                   <img src={jsLogo} alt="skill-pic" className={classes.SkillPic}/>
                </div>
            </div>
 
