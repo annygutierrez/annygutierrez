@@ -189,13 +189,66 @@
     }
 }
 
+@media (max-width: 950px) {
+    .companyLogo {
+        width: 90px;
+        height: 90px;
+        margin-left: 2em;
+        margin-top:1.3em;
+    }
+}
+
+@media (max-width: 680px) {
+    .companyLogo {
+        width: 60px;
+        height: 60px;
+        margin-left: 2em;
+        margin-top: 2.1em;
+    }
+    .CompanyName {
+        font-size: 20px;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+    
+    .TeamName {
+        margin-left: 1.5em;
+        font-size: 13px;
+        margin-top: -2em; 
+        color: #8F95A3;
+    }
+}
+
 @media (max-width: 650px) {
     .MargenContainer {
         display: none;
     }
 
+    .companyLogo {
+        width: 60px;
+        height: 60px;
+        margin-left: 1em;
+        margin-top: 2.1em;
+    }
+
+    .separator {
+        width: 1px;
+        height: 4em;
+        background-color: #2476FA;
+        margin-top: 2em;
+        display: inline-block;
+    }
+
     .Content {
         padding-left: 6em;
+    }
+
+    .descriptionWork {
+        font-size: 16px;
+        margin-right: 6em;
+        margin-top: 3em;
+        margin-left: 1em;
+        color: #4C5544;
     }
 }
 
@@ -209,7 +262,7 @@
         list-style: none;
     }
     .CompanyContainer {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     .separator {
         width: 1px;
@@ -227,6 +280,30 @@
         margin-top: -2em; 
         color: #8F95A3;
     } */
+}
+
+@media (max-width: 510) {
+    .Content {
+        padding-left: 3em;
+    }
+    .CompanyName {
+        font-size: 14px;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+    
+    .TeamName {
+        margin-left: 1.5em;
+        font-size: 9px;
+        margin-top: -2em; 
+        color: #8F95A3;
+    }
+    .companyLogo {
+        width: 40px;
+        height: 40px;
+        margin-left: 1em;
+        margin-top: 2.8em;
+    }
 }
 
 @media (max-width: 480px) {

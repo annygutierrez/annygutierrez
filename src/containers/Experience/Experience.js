@@ -6,7 +6,7 @@ import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 
 
 class Experience extends Component {
-// Reorganize code
+  // Reorganize code
   render() {
     return (
       <div className={classes.container}>
@@ -29,7 +29,7 @@ class Experience extends Component {
 
             <div className={classes.SkillsContainer}>
               <div className={classes.CompanyContainer}>
-               <div className={classes.separator}></div>
+                <div className={classes.separator}></div>
                 <img className={classes.companyLogo} src={everisLogo} alt="company-one" />
                 <div>
                   <p className={classes.CompanyName}>Everis <span className={classes.CompanyNameTwo}>an NTT Data Company</span></p>
@@ -48,11 +48,11 @@ class Experience extends Component {
                 <li className={classes.SkillItem}>Linux</li>
               </ul>
             </div>
-            
+
           </div>
           <p className={classes.descriptionWork}>We work on decentralized apps and digital tools projects, based on Blockchain technologies, we seek to be synonymous with disruption in the technological community in Latin America and the world.</p>
-        <div className={classes.PageColorSeparator}></div>
-        <div className={classes.PageSeparator}></div>
+          <div className={classes.PageColorSeparator}></div>
+          <div className={classes.PageSeparator}></div>
 
           <div className={classes.WorkCard}>
             <div className={classes.ExperienceContainer}>
@@ -68,8 +68,10 @@ class Experience extends Component {
             </div>
             <div className={classes.SkillsContainer}>
               <div className={classes.CompanyContainer}>
-               <div className={classes.separator}></div>
-                <img className={classes.companyLogo} src={americaLogo} alt="company-one" />
+                {/* <div className={classes.SkillHeadContainer}> */}
+                  <div className={classes.separator}></div>
+                  <img className={classes.companyLogo} src={americaLogo} alt="company-one" />
+                {/* </div> */}
                 <div>
                   <p className={classes.CompanyName}>América televisión</p>
                   <p className={classes.TeamName}>InnovoAmérica</p>
@@ -87,7 +89,7 @@ class Experience extends Component {
             </div>
           </div>
           <p className={classes.descriptionWork}>As the first innovation team at America Television, we seek to create effective tools to manage information and improve the efficiency of work in the different areas of the channel, with a work method based on agile methodologies and focusing on the user. </p>
-        
+
 
         </div>
       </div>
