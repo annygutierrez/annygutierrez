@@ -33,25 +33,25 @@ function App() {
           </div>
 
           <div className="about-section">
-            <div className="about-head d-flex align-items-center">
+            <div className="about-head d-flex align-items-center pr-2">
               <img className="arrow" src={arrow} alt="arrow-icon" />
               <span className="about-title">About me</span>
             </div>
             {/* <p className="about-description">I'm a software developer, currently focused on the development of hybrid mobile applications and developing in an environment with decentralized technologies in Everis Blockchain.</p> */}
             <p className="salute mt-5">ELSEWHERE</p>
             <div className="d-flex flex-row media-links">
-              <div className="media-icon-container d-flex align-items-center justify-content-center">
+              <a href="https://www.instagram.com/annyglop16/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center insta">
                 <i className="fab fa-instagram icons-media"></i>
-              </div>
-              <div className="media-icon-container d-flex align-items-center justify-content-center">
+              </a>
+              <a href="https://www.linkedin.com/in/annygutierrez/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center linked">
                 <i className="fab fa-linkedin-in icons-media"></i>
-              </div>
-              <div className="media-icon-container d-flex align-items-center justify-content-center">
+              </a>
+              <a href="mailto:annygutierrezlopez@gmail.com" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center mail">
                 <i className="far fa-envelope icons-media"></i>
-              </div>
-              <div className="media-icon-container d-flex align-items-center justify-content-center">
+              </a>
+              <a href="https://twitter.com/annyglop23" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center twitter">
                 <i className="fab fa-twitter icons-media"></i>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -102,18 +102,18 @@ function App() {
       </div>
       <div className="footer-container py-3 d-flex align-items-center justify-content-center flex-column mt-5">
         <div className="d-flex flex-row media-links pt-3">
-          <div className="media-icon-container d-flex align-items-center justify-content-center">
+          <a href="https://www.instagram.com/annyglop16/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center insta">
             <i className="fab fa-instagram icons-media"></i>
-          </div>
-          <div className="media-icon-container d-flex align-items-center justify-content-center">
+          </a>
+          <a href="https://www.linkedin.com/in/annygutierrez/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center linked">
             <i className="fab fa-linkedin-in icons-media"></i>
-          </div>
-          <div className="media-icon-container d-flex align-items-center justify-content-center">
+          </a>
+          <a href="mailto:annygutierrezlopez@gmail.com" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center mail">
             <i className="far fa-envelope icons-media"></i>
-          </div>
-          <div className="media-icon-container d-flex align-items-center justify-content-center">
+          </a>
+          <a href="https://twitter.com/annyglop23" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center twitter">
             <i className="fab fa-twitter icons-media"></i>
-          </div>
+          </a>
         </div>
         <p className="mt-5 footer-copyrights">© 2020 Anny Gutierrez. All rights reserved.</p>
       </div>

@@ -6,6 +6,26 @@ body {
 
 /*-------------------*/
 
+.insta:hover {
+  background: rgb(109,78,160);
+  background: linear-gradient(180deg, rgba(109,78,160,1) 0%, rgba(206,31,124,1) 35%, rgba(254,205,103,1) 100%);
+}
+
+.linked:hover {
+  background-color: #0771ae;
+}
+
+.mail:hover {
+  background-color: #d6473a;
+}
+
+.twitter:hover {
+  background-color: #1c9deb;
+}
+
+
+/*-------------------*/
+
 .project-img {
   width: 297px;
   height: auto;
@@ -90,10 +110,12 @@ body {
 }
 
 .media-icon-container {
+  text-decoration: none !important;
   background-color: #000;
   width: 2em;
   height: 2em;
   margin-right: 1em;
+  cursor: pointer;
 }
 
 .about-title {
@@ -104,6 +126,13 @@ body {
 
 .about-head {
   margin-top: 2em;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.about-head:hover {
+  background-color: #EBFF00;
+  border-radius: 6px;
 }
 
 .about-description {
@@ -113,8 +142,8 @@ body {
 }
 
 .arrow {
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .menu-icon-container * {
