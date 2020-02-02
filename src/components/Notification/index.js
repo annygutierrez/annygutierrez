@@ -15,7 +15,7 @@ const Container = styled.div`
 const Notification = (props) => {
     const topMessure = props.show ? 16 : -100;
     return(
-         <Container top={props.top}>Example text here</Container>
+         <Container top={props.top}>Message sent</Container>
     );
 };
 

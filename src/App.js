@@ -16,36 +16,43 @@ import { useInput } from '../src/hooks/input-hook';
 function App() {
 
   const [showNotification, setNotificationVisibility] = useState(-100);
+  const [disableForm, setDisableForm] = useState(false);
 
-  const { value:name, bind:bindName, reset:resetName } = useInput('');
-  const { value:email, bind:bindEmail, reset:resetEmail } = useInput('');
-  const { value:message, bind:bindMessage, reset:resetMessage } = useInput('');
-  
+  const { value: name, bind: bindName, reset: resetName } = useInput('');
+  const { value: email, bind: bindEmail, reset: resetEmail } = useInput('');
+  const { value: message, bind: bindMessage, reset: resetMessage } = useInput('');
 
-  
+
+
 
   const sendEmail = (event) => {
+    setDisableForm(true);
     event.preventDefault();
-    fetch('https://ag-db.herokuapp.com/post', {
-      method: 'post',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        name,
-        message,
-        email
+    if (name !== '' & email !== '' & message !== '') {
+      fetch('https://ag-db.herokuapp.com/post', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          message,
+          email
+        })
       })
-     })
-     .then((msg) => {
-       console.log(msg);
-      resetEmail();
-      resetName();
-      resetMessage();
-      setNotificationVisibility(16);
-     });
-    
-    setTimeout(() => {
-      setNotificationVisibility(-100);
-    }, 4000);
+        .then((msg) => {
+          resetEmail();
+          resetName();
+          resetMessage();
+          setNotificationVisibility(16);
+          setDisableForm(false);
+        })
+        .catch(err => {
+          setDisableForm(false);
+        });
+
+      setTimeout(() => {
+        setNotificationVisibility(-100);
+      }, 4000);
+    }
   }
 
   return (
@@ -128,7 +135,18 @@ function App() {
               <div className="input-group flex-nowrap input-contact py-2">
                 <textarea {...bindMessage} className="form-control input-form-contact" placeholder="Message"></textarea>
               </div>
-              <button type="submit" className="btn btn-outline-secondary form-button mt-4">Send Message</button>
+              {
+                disableForm ?
+                  <p className="salute mt-4">Enviando...</p> : (
+                    <button
+                      disabled={disableForm}
+                      type="submit"
+                      className="btn btn-outline-secondary form-button mt-4"
+                    >
+                      Send Message
+                    </button>
+                  )
+              }
 
             </form>
           </div>
