@@ -154,6 +154,7 @@ body {
 .label-icon {
   position: fixed;
   top: 18px;
+  cursor: pointer;
   right: 30px;
   font-size: 24px;
   z-index: 1;
@@ -192,7 +193,7 @@ body {
   position: relative;
   z-index: 0;
   padding: 20px 20px 0px 20px;
-  max-width: 728px;
+  max-width: 100vw;
   margin: 0 auto;
   overflow: hidden;
   transition: all 300ms ease-in-out;
@@ -224,12 +225,12 @@ img {
 .slideout-sidebar {
   position: fixed;
   top: 0;
-  left: -190px;
+  left: -270px;
   z-index: 0;
-  width: 150px;
+  width: 260px;
   height: 100%;
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
   transition: all 300ms ease-in-out;
 }
 
@@ -243,12 +244,13 @@ img {
   cursor: pointer;
   padding: 0.2em 0;
   border-bottom: 1px solid rgba(244,244,244,0.4);
-  font-family: 'Lora', serif;
+  font-family: 'Raleway', sans-serif;
   color: #000;
   font-size: 35px;
 }
 
 .menu-list {
+  background-color: white;
   margin-top: -0.4em;
 }
 
@@ -283,15 +285,15 @@ img {
 
 
 #menu-toggle:checked ~ .slideout-sidebar {
-  left: 1.5em;
+  left: 0px;
 }
 
 #menu-toggle:checked + .menu-icon {
-  left: 210px;
+  left: 283px;
 }
 
 #menu-toggle:checked ~ .content-container {
-  padding-left: 190px;
+  padding-left: 270px;
 }
 
 /* -- Media Queries -- */
@@ -299,7 +301,7 @@ img {
 @media (max-width: 991px) {
   
   .content-container {
-    max-width: 480px;
+    max-width: 100vw;
   }
   
 }
