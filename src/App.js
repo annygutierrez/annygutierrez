@@ -1,40 +1,136 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
-import Home from './containers/Home/Home';
-import Experience from './containers/Experience/Experience';
-import Skills from './containers/Skills/Skills';
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactBootstrap from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { ButtonGroup } from 'react-bootstrap';
+import { DropdownButton } from 'react-bootstrap';
+import { MenuItem } from 'react-bootstrap';
+import menuIcon from './assets/menu-icon.svg';
+import labelIcon from './assets/label-icon.svg';
+import user from './assets/user.svg';
+import arrow from './assets/arrow.svg';
+import kaytrust from './assets/kaytrust.svg';
+import kaytrustweb from './assets/kaytrustweb.svg';
 
-class App extends Component {
+function App() {
+  return (
+    <div className="main-container">
+      <input type="checkbox" id="menu-toggle" />
+      <label htmlFor="menu-toggle" className="menu-icon">
+        <img className="menu-icon-img" src={menuIcon} alet="menu-icon" />
+      </label>
+      <img className="label-icon" src={labelIcon} alet="label-icon" />
+      <div className="content-container">
+        <div className="presentation-section">
+          <p className="salute">HELLO THERE</p>
+          <img className="user-image" src={user} alt="user-image" />
+          <div className="title-container">
+            <span className="title-presentation">My name is<br></br> Anny Gutierrez.</span>
+            <br></br>
+            <span className="title-presentation">I develop apps & progams.</span>
+          </div>
 
-  componentDidMount() {
-    this.binaryToDecimal(10);
-  }
+          <div className="about-section">
+            <div className="about-head d-flex align-items-center">
+              <img className="arrow" src={arrow} alt="arrow-icon" />
+              <span className="about-title">About me</span>
+            </div>
+            {/* <p className="about-description">I'm a software developer, currently focused on the development of hybrid mobile applications and developing in an environment with decentralized technologies in Everis Blockchain.</p> */}
+            <p className="salute mt-5">ELSEWHERE</p>
+            <div className="d-flex flex-row media-links">
+              <div className="media-icon-container d-flex align-items-center justify-content-center">
+                <i className="fab fa-instagram icons-media"></i>
+              </div>
+              <div className="media-icon-container d-flex align-items-center justify-content-center">
+                <i className="fab fa-linkedin-in icons-media"></i>
+              </div>
+              <div className="media-icon-container d-flex align-items-center justify-content-center">
+                <i className="far fa-envelope icons-media"></i>
+              </div>
+              <div className="media-icon-container d-flex align-items-center justify-content-center">
+                <i className="fab fa-twitter icons-media"></i>
+              </div>
+            </div>
+          </div>
 
-  binaryToDecimal(n) {
-    let exponents = [];
-    Array.from(String(n), Number).forEach((num, i) => {
-      if (num === 1) {
-        exponents.push(i + 1);  
-      }
-    });
-    // let power = exponents.map(num => Math.pow(2,num));
-    console.log(exponents.reduce((a,b) => a + b, 0));
-  }
 
-  render() {
-    return (
-      <div>
-        <Layout>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/experience" component={Experience} />
-            <Route path="/skills" component={Skills} />
-          </Switch>
-        </Layout>
+          <div className="projects-section pt-3">
+            <p className="salute mt-5">RECENT WORK</p>
+
+            <div className="project-container d-flex align-items-center justify-content-center flex-column py-3">
+              <img className="project-img" src={kaytrust} alt="project" />
+              <div className="project-text py-4">
+                <p className="project-title">Kay Trust Wallet - Digital Identity</p>
+                <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+              </div>
+            </div>
+
+            <div className="project-container d-flex align-items-center justify-content-center flex-column py-3">
+              <img className="project-img" src={kaytrustweb} alt="project" />
+              <div className="project-text py-4">
+                <p className="project-title">Kay Trust Wallet - Digital Identity</p>
+                <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div className="contact-section">
+            <p className="salute mt-5 pl-4 pb-3">CONTACT ME</p>
+            <form className="contact-form d-flex align-items-center justify-content-center flex-column">
+              <div className="input-group flex-nowrap input-contact py-2">
+                <input type="text" className="form-control input-form-contact" placeholder="Name" />
+              </div>
+              <div className="input-group flex-nowrap input-contact py-2">
+                <input type="text" className="form-control input-form-contact" placeholder="Email" />
+              </div>
+              <div className="input-group flex-nowrap input-contact py-2">
+                <textarea className="form-control input-form-contact" placeholder="Message"></textarea>
+              </div>
+              <button type="button" className="btn btn-outline-secondary form-button mt-4">Send Message</button>
+
+            </form>
+          </div>
+
+
+        </div>
+
       </div>
-    );
-  }
+      <div className="footer-container py-3 d-flex align-items-center justify-content-center flex-column mt-5">
+        <div className="d-flex flex-row media-links pt-3">
+          <div className="media-icon-container d-flex align-items-center justify-content-center">
+            <i className="fab fa-instagram icons-media"></i>
+          </div>
+          <div className="media-icon-container d-flex align-items-center justify-content-center">
+            <i className="fab fa-linkedin-in icons-media"></i>
+          </div>
+          <div className="media-icon-container d-flex align-items-center justify-content-center">
+            <i className="far fa-envelope icons-media"></i>
+          </div>
+          <div className="media-icon-container d-flex align-items-center justify-content-center">
+            <i className="fab fa-twitter icons-media"></i>
+          </div>
+        </div>
+        <p className="mt-5 footer-copyrights">© 2020 Anny Gutierrez. All rights reserved.</p>
+      </div>
+
+      <div className="slideout-sidebar d-flex align-items-center justify-content-center">
+        <ul className="menu-list">
+          <li>Kaytrust</li>
+          <li>Cadena</li>
+          <li>In_grid</li>
+          <li>Alastria</li>
+          <li>Honduras</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+    </div>
+  );
 }
 
 export default App;
