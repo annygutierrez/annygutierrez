@@ -26,9 +26,9 @@ function App() {
 
 
   const sendEmail = (event) => {
-    setDisableForm(true);
     event.preventDefault();
     if (name !== '' & email !== '' & message !== '') {
+      setDisableForm(true);
       fetch('https://ag-db.herokuapp.com/post', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
@@ -126,18 +126,34 @@ function App() {
           <div className="contact-section">
             <p className="salute mt-5 pl-4 pb-3">CONTACT ME</p>
             <form onSubmit={($event) => sendEmail($event)} className="contact-form d-flex align-items-center justify-content-center flex-column">
-              <div className="input-group flex-nowrap input-contact py-2">
-                <input {...bindName} type="text" className="form-control input-form-contact" placeholder="Name" />
-              </div>
-              <div className="input-group flex-nowrap input-contact py-2">
-                <input {...bindEmail} type="text" className="form-control input-form-contact" placeholder="Email" />
-              </div>
-              <div className="input-group flex-nowrap input-contact py-2">
-                <textarea {...bindMessage} className="form-control input-form-contact" placeholder="Message"></textarea>
-              </div>
+              {
+                disableForm ? (
+                  <div className="loading-container">
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                  </div>
+                ) : (
+                    <React.Fragment>
+                      <div className="input-group flex-nowrap input-contact py-2">
+                        <input {...bindName} type="text" className="form-control input-form-contact" placeholder="Name" />
+                      </div>
+                      <div className="input-group flex-nowrap input-contact py-2">
+                        <input {...bindEmail} type="text" className="form-control input-form-contact" placeholder="Email" />
+                      </div>
+                      <div className="input-group flex-nowrap input-contact py-2">
+                        <textarea {...bindMessage} className="form-control input-form-contact" placeholder="Message"></textarea>
+                      </div>
+                    </React.Fragment>
+                  )
+              }
               {
                 disableForm ?
-                  <p className="salute mt-4">Enviando...</p> : (
+                  <p className="salute mt-4">Sending...</p> : (
                     <button
                       disabled={disableForm}
                       type="submit"
