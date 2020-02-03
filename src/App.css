@@ -1,8 +1,19 @@
 body {
   font-family: 'Roboto Condensed', arial, sans-serif;
   margin: 0;
+  padding-top: 0;
   background-color:#fafafa;
 }
+
+.label-icon-container {
+
+  position: fixed;
+  top: 18px;
+  right: 30px;
+  z-index: 1;
+}
+
+
 
 /*--------------*/
 
@@ -164,12 +175,19 @@ body {
 /*-------------------*/
 
 .project-img {
-  width: 297px;
-  height: auto;
+  /* width: auto;
+  height: auto; */
+  max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+}
+
+.work-title {
+  margin-top: 5em;
 }
 
 .project-text {
-  width: 297px;
+  /* width: 297px; */
   font-family: 'Open Sans', sans-serif;
 
 }
@@ -224,7 +242,8 @@ body {
   margin-bottom: 0px;
 }
 .main-container {
-  margin-bottom: 0px;
+  margin: 0px;
+  background-color: white;
 }
 
 .footer-copyrights {
@@ -302,6 +321,8 @@ body {
 
 .presentation-section {
   padding-top: 7em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 
 .salute {
@@ -329,7 +350,7 @@ body {
 .content-container {
   position: relative;
   z-index: 0;
-  padding: 20px 20px 0px 20px;
+  padding: 0px;
   max-width: 100vw;
   margin: 0 auto;
   overflow: hidden;
@@ -502,4 +523,93 @@ img {
 
   }
   
+}
+
+/*-----------------*/
+
+@media (min-width: 1280px) {
+  /*-----Horizontal scroll------*/
+  /* .projects-section {
+    display: none;
+  }
+
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .scrolling-wrapper-flexbox .card {
+    flex: 0 0 auto;
+  }
+  .card {
+    width: 100px;
+  } */
+}
+
+@media (min-width: 768px) {
+  .presentation-section {
+    height: 100vh;
+    width: 40vw;
+    position: fixed;
+  }
+
+  .content-web-section {
+    width: 60vw;
+    margin-left: 40vw;
+    background-color: #333333;
+    padding-top: 4em;
+    margin-top: 0px;
+  }
+
+  .work-title {
+    margin-top: 0px;
+  }
+
+  .projects-section {
+    padding-right: 4em;
+    padding-left: 4em;
+  }
+  .user-image {
+    display: none;
+  }
+
+  .presentation-section {
+    padding-top: 12em;
+  }
+
+  .contact-title {
+    width: 297px;
+  }
+  .light-salute {
+    color: #C6C4C4;
+  }
+
+  .project-title {
+    border-bottom: 1px solid #C6C4C4;
+  }
+  .contact-section {
+    background-color: #fff;
+  }
+
+  
+  .media-icon-container-footer {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+  }
+
+  .icons-media-footer {
+    color: #999999;
+  }
+
+  .media-icon-container-press {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .icons-media-press {
+    color: #000;
+  }
+  .media-icon-container:hover * {
+    color: white;
+  }
 }

@@ -44,14 +44,15 @@ function App() {
           resetMessage();
           setNotificationVisibility(16);
           setDisableForm(false);
+          setTimeout(() => {
+            setNotificationVisibility(-100);
+          }, 4000);
         })
         .catch(err => {
           setDisableForm(false);
         });
 
-      setTimeout(() => {
-        setNotificationVisibility(-100);
-      }, 4000);
+      
     }
   }
 
@@ -62,10 +63,10 @@ function App() {
       <label htmlFor="menu-toggle" className="menu-icon">
         <img className="menu-icon-img" src={menuIcon} alt="menu-icon" />
       </label>
-      <label htmlFor="menu-toggle">
-
+      <label htmlFor="menu-toggle" className="label-icon-container">
         <img className="label-icon" src={labelIcon} alt="label-icon" />
       </label>
+
       <div className="content-container">
         <div className="presentation-section">
           <p className="salute">HELLO THERE</p>
@@ -84,48 +85,63 @@ function App() {
             {/* <p className="about-description">I'm a software developer, currently focused on the development of hybrid mobile applications and developing in an environment with decentralized technologies in Everis Blockchain.</p> */}
             <p className="salute mt-5">ELSEWHERE</p>
             <div className="d-flex flex-row media-links">
-              <a href="https://www.instagram.com/annyglop16/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center insta">
-                <i className="fab fa-instagram icons-media"></i>
+              <a href="https://www.instagram.com/annyglop16/" target="_blank" className="media-icon-container media-icon-container-press d-flex align-items-center justify-content-center insta">
+                <i className="fab fa-instagram icons-media icons-media-press"></i>
               </a>
-              <a href="https://www.linkedin.com/in/annygutierrez/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center linked">
-                <i className="fab fa-linkedin-in icons-media"></i>
+              <a href="https://www.linkedin.com/in/annygutierrez/" target="_blank" className="media-icon-container media-icon-container-press d-flex align-items-center justify-content-center linked">
+                <i className="fab fa-linkedin-in icons-media icons-media-press"></i>
               </a>
-              <a href="mailto:annygutierrezlopez@gmail.com" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center mail">
-                <i className="far fa-envelope icons-media"></i>
+              <a href="mailto:annygutierrezlopez@gmail.com" target="_blank" className="media-icon-container media-icon-container-press d-flex align-items-center justify-content-center mail">
+                <i className="far fa-envelope icons-media icons-media-press"></i>
               </a>
-              <a href="https://twitter.com/annyglop23" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center twitter">
-                <i className="fab fa-twitter icons-media"></i>
+              <a href="https://twitter.com/annyglop23" target="_blank" className="media-icon-container media-icon-container-press d-flex align-items-center justify-content-center twitter">
+                <i className="fab fa-twitter icons-media icons-media-press"></i>
               </a>
             </div>
           </div>
+        </div>
 
+
+
+        <div className="content-web-section horizontal-scroll-wrapper squares">
+          {/* <div className="scrolling-wrapper">
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+            <div className="card"><h2>Card</h2></div>
+          </div> */}
 
           <div className="projects-section pt-3">
-            <p className="salute mt-5">RECENT WORK</p>
+            <p className="salute work-title light-salute">RECENT WORK</p>
+            <div className="just-projects-container">
+              <div className="project-container d-flex align-items-center justify-content-center flex-column py-3">
+                <img className="project-img" src={kaytrust} alt="project" />
+                <div className="project-text py-4">
+                  <p className="project-title light-salute">Kay Trust Wallet - Digital Identity</p>
+                  <p className="project-description light-salute">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+                </div>
+              </div>
 
-            <div className="project-container d-flex align-items-center justify-content-center flex-column py-3">
-              <img className="project-img" src={kaytrust} alt="project" />
-              <div className="project-text py-4">
-                <p className="project-title">Kay Trust Wallet - Digital Identity</p>
-                <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+              <div className="project-container d-flex align-items-center justify-content-center flex-column py-3">
+                <img className="project-img" src={kaytrustweb} alt="project" />
+                <div className="project-text py-4">
+                  <p className="project-title light-salute">Kay Trust Wallet - Digital Identity</p>
+                  <p className="project-description light-salute">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+                </div>
               </div>
             </div>
-
-            <div className="project-container d-flex align-items-center justify-content-center flex-column py-3">
-              <img className="project-img" src={kaytrustweb} alt="project" />
-              <div className="project-text py-4">
-                <p className="project-title">Kay Trust Wallet - Digital Identity</p>
-                <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
-              </div>
-            </div>
-
 
           </div>
 
+          <div className="contact-section pb-5">
 
-          <div className="contact-section">
-            <p className="salute mt-5 pl-4 pb-3">CONTACT ME</p>
             <form onSubmit={($event) => sendEmail($event)} className="contact-form d-flex align-items-center justify-content-center flex-column">
+              <p className="salute mt-5 pb-3 contact-title">CONTACT ME</p>
               {
                 disableForm ? (
                   <div className="loading-container">
@@ -165,28 +181,33 @@ function App() {
               }
 
             </form>
+
           </div>
 
 
+
+          <div className="footer-container py-3 d-flex align-items-center justify-content-center flex-column">
+            <div className="d-flex flex-row media-links pt-3">
+              <a href="https://www.instagram.com/annyglop16/" target="_blank" className="media-icon-container media-icon-container-footer d-flex align-items-center justify-content-center insta">
+                <i className="fab fa-instagram icons-media icons-media-footer"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/annygutierrez/" target="_blank" className="media-icon-container media-icon-container-footer d-flex align-items-center justify-content-center linked">
+                <i className="fab fa-linkedin-in icons-media icons-media-footer"></i>
+              </a>
+              <a href="mailto:annygutierrezlopez@gmail.com" target="_blank" className="media-icon-container media-icon-container-footer d-flex align-items-center justify-content-center mail">
+                <i className="far fa-envelope icons-media icons-media-footer"></i>
+              </a>
+              <a href="https://twitter.com/annyglop23" target="_blank" className="media-icon-container media-icon-container-footer d-flex align-items-center justify-content-center twitter">
+                <i className="fab fa-twitter icons-media icons-media-footer"></i>
+              </a>
+            </div>
+            <p className="mt-5 footer-copyrights">© 2020 Anny Gutierrez. All rights reserved.</p>
+          </div>
+
         </div>
 
-        <div className="footer-container py-3 d-flex align-items-center justify-content-center flex-column mt-5">
-          <div className="d-flex flex-row media-links pt-3">
-            <a href="https://www.instagram.com/annyglop16/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center insta">
-              <i className="fab fa-instagram icons-media"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/annygutierrez/" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center linked">
-              <i className="fab fa-linkedin-in icons-media"></i>
-            </a>
-            <a href="mailto:annygutierrezlopez@gmail.com" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center mail">
-              <i className="far fa-envelope icons-media"></i>
-            </a>
-            <a href="https://twitter.com/annyglop23" target="_blank" className="media-icon-container d-flex align-items-center justify-content-center twitter">
-              <i className="fab fa-twitter icons-media"></i>
-            </a>
-          </div>
-          <p className="mt-5 footer-copyrights">© 2020 Anny Gutierrez. All rights reserved.</p>
-        </div>
+
+
 
       </div>
 
