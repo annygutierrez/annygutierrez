@@ -403,7 +403,7 @@ img {
   padding: 0.2em 0;
   border-bottom: 1px solid rgba(244,244,244,0.4);
   font-family: 'Raleway', sans-serif;
-  color: #000;
+  color: transparent;
   font-size: 35px;
 }
 
@@ -444,6 +444,10 @@ img {
 
 #menu-toggle:checked ~ .slideout-sidebar {
   left: 0px;
+}
+
+#menu-toggle:checked ~ .slideout-sidebar ul li {
+  color: #000;
 }
 
 #menu-toggle:checked + .menu-icon {
