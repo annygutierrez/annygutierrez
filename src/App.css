@@ -613,3 +613,10 @@ img {
     color: white;
   }
 }
+
+@media (max-width: 767px) {
+  .projects-section {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}
