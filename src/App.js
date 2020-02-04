@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,6 +15,10 @@ import { useInput } from '../src/hooks/input-hook';
 
 function App() {
 
+  
+
+
+
   const [showNotification, setNotificationVisibility] = useState(-100);
   const [disableForm, setDisableForm] = useState(false);
 
@@ -23,7 +27,19 @@ function App() {
   const { value: message, bind: bindMessage, reset: resetMessage } = useInput('');
 
 
+  useEffect(() => {
+    let item = document.getElementsByTagName('main')[0];
+    window.addEventListener('wheel', (e) => {
 
+      if (e.deltaY > 0) item.scrollLeft += 100;
+      else item.scrollLeft -= 100;
+    });
+    return () => window.removeEventListener('wheel', (e) => {
+
+      if (e.deltaY > 0) item.scrollLeft += 100;
+      else item.scrollLeft -= 100;
+    });
+  });
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -52,12 +68,28 @@ function App() {
           setDisableForm(false);
         });
 
-      
+
     }
   }
 
   return (
     <div className="main-container">
+      {/* <div className="horizontal-scroll-wrapper squares">
+        <div className="div-item">item 1</div>
+        <div className="div-item">item 2</div>
+        <div className="div-item">item 3</div>
+        <div className="div-item">item 4</div>
+        <div className="div-item">item 5</div>
+        <div className="div-item">item 6</div>
+        <div className="div-item">item 7</div>
+        <div className="div-item">item 8</div>
+      </div> */}
+      <main className="cont-scroll">
+        <div className="wrapper1" >
+          <div className="square1" ></div>
+          <div className="square2" ></div>
+        </div>
+      </main>
       <Notification top={showNotification}></Notification>
       <input type="checkbox" id="menu-toggle" />
       <label htmlFor="menu-toggle" className="menu-icon">
@@ -104,17 +136,7 @@ function App() {
 
 
         <div className="content-web-section horizontal-scroll-wrapper squares">
-          {/* <div className="scrolling-wrapper">
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-            <div className="card"><h2>Card</h2></div>
-          </div> */}
+
 
           <div className="projects-section pt-3">
             <p className="salute work-title light-salute">RECENT WORK</p>

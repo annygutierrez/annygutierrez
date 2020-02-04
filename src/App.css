@@ -533,11 +533,111 @@ img {
 
 @media (min-width: 1280px) {
   /*-----Horizontal scroll------*/
-  /* .projects-section {
+  .content-web-section {
     display: none;
   }
 
-  .scrolling-wrapper-flexbox {
+  .cont-scroll {
+    overflow: scroll hidden;
+  }
+  /* .presentation-section {
+    width: 50vw;
+  } */
+  .cont-scroll {
+      position: absolute;
+      width: 60vw;
+      height: 100vh;
+      margin-left: 40vw;
+      -webkit-overflow-scrolling: touch;
+  }
+  .square1 {
+    width: 60vw;
+      height: 100vh;
+    background-color: blue;
+    /* background-image: url("assets/kayweb.svg");
+    background-repeat: no-repeat, repeat;
+    background-size: 100%  100%; */
+    /* background-position: center; */
+  }
+
+  .square2 {
+    background-color: red;
+    width: 60vw;
+      height: 100vh;
+    /* background-image: url("assets/wallet.svg"); */
+    /* background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center; */
+  }
+
+
+  
+  .wrapper1 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      width: auto;
+  }
+  
+  .wrapper1 > div {
+      pointer-events: none;
+      flex: 0 0 auto;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  /* ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    width: 1px;
+    height: 1px;
+  }
+  
+  .div-item {
+    box-sizing: border-box;
+  }
+  
+  .horizontal-scroll-wrapper {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 5vw;
+    width: calc(55vw);
+    height: 60vw;
+    margin: 0;
+    padding-top: 1px;
+    background-color: #abc;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translateY(-250px);
+    transform-origin: right top;
+  }
+  .horizontal-scroll-wrapper > .div-item {
+    display: block;
+    padding: 5px;
+    background-color: #cab;
+    transform: rotate(90deg);
+    transform-origin: right top;
+  }
+  
+  .squares {
+    padding: 55vw 0 0 0;
+  }
+  .squares > .div-item {
+    width: 55vw;
+    height: 60vw;
+    margin: 0;
+  } */
+
+  /* .scrolling-wrapper-flexbox {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
