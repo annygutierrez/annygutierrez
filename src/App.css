@@ -546,12 +546,27 @@ img {
 
 @media (min-width: 1280px) {
   /*-----Horizontal scroll------*/
+  .form-button {
+    min-width: 500px;
+  }
+  .contact-title {
+    margin-top: 0em;
+    min-width: 500px;
+  }
   .content-web-section {
     display: none;
   }
   /* .presentation-section {
     width: 50vw;
   } */
+  .input-contact {
+    min-width: 500px !important;
+  }
+
+  .contact-form {
+    z-index: 100000000000000000000000;
+    position: absolute;
+  }
 
   .title-container {
     background-image: url("assets/draw.svg");
@@ -622,7 +637,7 @@ img {
   }
   
   .wrapper1 > div {
-      pointer-events: none;
+      /* pointer-events: none; */
       flex: 0 0 auto;
       /* width: 100vw; */
       height: 100vh;
@@ -723,6 +738,7 @@ img {
   }
 
   .contact-title {
+    margin-top: 5em;
     width: 297px;
   }
   .light-salute {

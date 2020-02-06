@@ -110,9 +110,49 @@ function App() {
               <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
             </div>
           </div>
-          {/* <div className="texto">
-            <p>hello</p>
-          </div> */}
+          <div className="texto d-flex align-items-center justify-content-center">
+          <form onSubmit={($event) => sendEmail($event)} className="contact-form d-flex align-items-center justify-content-center flex-column">
+              <p className="salute pb-3 contact-title">CONTACT ME</p>
+              {
+                disableForm ? (
+                  <div className="loading-container">
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                  </div>
+                ) : (
+                    <React.Fragment>
+                      <div className="input-group flex-nowrap input-contact py-2">
+                        <input {...bindName} type="text" className="form-control input-form-contact" placeholder="Name" />
+                      </div>
+                      <div className="input-group flex-nowrap input-contact py-2">
+                        <input {...bindEmail} type="text" className="form-control input-form-contact" placeholder="Email" />
+                      </div>
+                      <div className="input-group flex-nowrap input-contact py-2">
+                        <textarea {...bindMessage} className="form-control input-form-contact" placeholder="Message"></textarea>
+                      </div>
+                    </React.Fragment>
+                  )
+              }
+              {
+                disableForm ?
+                  <p className="salute mt-4">Sending...</p> : (
+                    <button
+                      disabled={disableForm}
+                      type="submit"
+                      className="btn btn-outline-secondary form-button mt-4"
+                    >
+                      Send Message
+                    </button>
+                  )
+              }
+
+            </form>
+          </div>
           {/* <div className="texto">Thats what you get</div>
           <div className="texto">Thats what you get</div>
           <div className="texto">Thats what you get</div>
