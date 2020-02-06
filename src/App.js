@@ -9,13 +9,17 @@ import labelIcon from './assets/label-icon.svg';
 import user from './assets/user.svg';
 import arrow from './assets/arrow.svg';
 import kaytrust from './assets/kaytrust.svg';
+import kayweb1 from './assets/kayweb1.svg';
+import wallet1 from './assets/wallet1.svg';
+import people from './assets/people.svg';
+import world from './assets/world.svg';
 import kaytrustweb from './assets/kaytrustweb.svg';
 import Notification from './components/Notification';
 import { useInput } from '../src/hooks/input-hook';
 
 function App() {
 
-  
+
 
 
 
@@ -86,8 +90,39 @@ function App() {
       </div> */}
       <main className="cont-scroll">
         <div className="wrapper1" >
-          <div className="square1" ></div>
-          <div className="square2" ></div>
+          <div className="texto">
+            <img className="kayweb1" src={kayweb1} alt="kayweb1" />
+            <div className="project-description-scroll px-4 py-4">
+              <p className="p-2 font-weight-bold">
+                <img class="icon-world mr-2" src={world} alt="world" />KayTrust
+              </p>
+              <p className="project-title">Kay Trust Wallet - Digital Identity</p>
+              <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+            </div>
+          </div>
+          <div className="texto">
+            <img className="kayweb1" src={people} alt="kayweb1" />
+            <div className="project-description-scroll px-4 py-4">
+              <p className="p-2 font-weight-bold">
+                <img class="icon-world mr-2" src={world} alt="world" />KayTrust
+              </p>
+              <p className="project-title">Kay Trust Wallet - Digital Identity</p>
+              <p className="project-description">KayTrust is a trusted platform that allows you to manage the digital identities of your customers in a safe, reliable and end-to-end manner.</p>
+            </div>
+          </div>
+          {/* <div className="texto">
+            <p>hello</p>
+          </div> */}
+          {/* <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div>
+          <div className="texto">Thats what you get</div> */}
         </div>
       </main>
       <Notification top={showNotification}></Notification>

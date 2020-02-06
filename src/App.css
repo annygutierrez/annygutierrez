@@ -13,6 +13,10 @@ body {
   z-index: 1;
 }
 
+.cont-scroll {
+  display: none;
+}
+
 
 
 /*--------------*/
@@ -390,6 +394,10 @@ img {
   padding: 20px;
   background-color: white;
   transition: all 300ms ease-in-out;
+  /* border-style: dashed */
+  border-right-style: dashed;
+  border-right-width: 1.2px;
+  border-color: #999999;
 }
 
 .slideout-sidebar ul {
@@ -456,6 +464,11 @@ img {
 
 #menu-toggle:checked ~ .content-container {
   padding-left: 270px;
+}
+
+.icon-world {
+  width: 1.8em;
+  height: 1.8em;
 }
 
 /* -- Media Queries -- */
@@ -536,24 +549,42 @@ img {
   .content-web-section {
     display: none;
   }
-
-  .cont-scroll {
-    overflow: scroll hidden;
-  }
   /* .presentation-section {
     width: 50vw;
   } */
+
+  .title-container {
+    background-image: url("assets/draw.svg");
+    background-position: 100% -15%;
+    padding-bottom: 3em;
+  }
+
+  .kayweb1 {
+    width: 100%;
+    height: auto;
+    margin-left: -700px;
+    margin: 0px;
+  }
+
+  
   .cont-scroll {
+      overflow: hidden;
+      display: block;
       position: absolute;
       width: 60vw;
       height: 100vh;
       margin-left: 40vw;
       -webkit-overflow-scrolling: touch;
   }
+  .texto {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
   .square1 {
     width: 60vw;
-      height: 100vh;
-    background-color: blue;
+    height: 100vh;
+    display: flex;
+    /* background-color: blue; */
     /* background-image: url("assets/kayweb.svg");
     background-repeat: no-repeat, repeat;
     background-size: 100%  100%; */
@@ -561,13 +592,23 @@ img {
   }
 
   .square2 {
-    background-color: red;
+    /* background-color: red; */
     width: 60vw;
       height: 100vh;
     /* background-image: url("assets/wallet.svg"); */
     /* background-repeat: no-repeat, repeat;
     background-size: cover;
     background-position: center; */
+  }
+
+  .project-description-scroll {
+    background-color: #F5F5F5;
+    position: absolute;
+    bottom: 0px;
+
+    width: 100%;
+    /* border: 1px solid blue; */
+    min-height: 9em;
   }
 
 
@@ -583,12 +624,12 @@ img {
   .wrapper1 > div {
       pointer-events: none;
       flex: 0 0 auto;
-      width: 100vw;
+      /* width: 100vw; */
       height: 100vh;
       margin: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
   }
 
   /* ::-webkit-scrollbar {
