@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2dd4e7f22faba994f7d9cbb786d63ac1",
+    "revision": "fd739615501127d77e6abaf8d3dd8b85",
     "url": "/index.html"
   },
   {
-    "revision": "41f1bbab0e9fc8be25a2",
+    "revision": "5f88526372e91ab75aa6",
     "url": "/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "386ff8e3fa12670d2b53",
-    "url": "/static/css/main.d940aaca.chunk.css"
+    "revision": "f9b55dfa3b2532cc25b3",
+    "url": "/static/css/main.9c6f3e0a.chunk.css"
   },
   {
-    "revision": "41f1bbab0e9fc8be25a2",
-    "url": "/static/js/2.5c86d597.chunk.js"
+    "revision": "5f88526372e91ab75aa6",
+    "url": "/static/js/2.25ce8240.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/static/js/2.5c86d597.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.25ce8240.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "386ff8e3fa12670d2b53",
-    "url": "/static/js/main.627f92d9.chunk.js"
+    "revision": "f9b55dfa3b2532cc25b3",
+    "url": "/static/js/main.541b7c8f.chunk.js"
   },
   {
     "revision": "f35392193b7d8210b557",
@@ -32,12 +32,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/arrow.3b70819e.svg"
   },
   {
+    "revision": "d1d6630a1249bd9c43e0481e543f2dde",
+    "url": "/static/media/draw.d1d6630a.svg"
+  },
+  {
     "revision": "ff954aaf5db0a32b95b04a3345148a67",
     "url": "/static/media/kaytrust.ff954aaf.svg"
   },
   {
     "revision": "0360a849db9f8d7fb093bc4e7cbf1920",
     "url": "/static/media/kaytrustweb.0360a849.svg"
+  },
+  {
+    "revision": "2495b077f4769ae3c4a4ad317239e70a",
+    "url": "/static/media/kayweb1.2495b077.svg"
   },
   {
     "revision": "ba0740a990000316a9d893b9697e1703",
@@ -52,7 +60,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/menu-icon.642b85e2.svg"
   },
   {
+    "revision": "9611aab9ac9abe8ecb2fc4b4eecc65e3",
+    "url": "/static/media/people.9611aab9.svg"
+  },
+  {
     "revision": "55814f916acf8540dfe088de649f2ece",
     "url": "/static/media/user.55814f91.svg"
+  },
+  {
+    "revision": "fe51fbef6ec3eaa5f3daac3323c2a018",
+    "url": "/static/media/wallet1.fe51fbef.svg"
+  },
+  {
+    "revision": "abaff9c38363b66e45be1f16a18b0703",
+    "url": "/static/media/world.abaff9c3.svg"
   }
 ]);
