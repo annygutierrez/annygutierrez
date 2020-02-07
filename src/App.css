@@ -581,6 +581,18 @@ img {
     margin: 0px;
   }
 
+  .photo1 {
+    background-image: url("assets/kayweb1.svg");
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .photo2 {
+    background-image: url("assets/people.svg");
+    background-size: cover;
+    background-position: center center;
+  }
+
   
   .cont-scroll {
       overflow: hidden;
