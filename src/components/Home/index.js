@@ -200,7 +200,7 @@ function Home() {
       <label onClick={() => hideMe()} htmlFor="menu-toggle" className="menu-icon">
         <img className="menu-icon-img" src={menuIcon} alt="menu-icon" />
       </label>
-      <label htmlFor="menu-toggle" className="label-icon-container">
+      <label onClick={() => hideMe()} htmlFor="menu-toggle" className="label-icon-container">
         <img className="label-icon" src={labelIcon} alt="label-icon" />
       </label>
 
