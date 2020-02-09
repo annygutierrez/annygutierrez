@@ -8,8 +8,6 @@ import labelIcon from '../../assets/label-icon.svg';
 import user from '../../assets/user.svg';
 import arrow from '../../assets/arrow.svg';
 import kaytrust from '../../assets/kaytrust.svg';
-import kayweb1 from '../../assets/kayweb1.svg';
-import wallet1 from '../../assets/wallet1.svg';
 import people from '../../assets/people.svg';
 import world from '../../assets/world.svg';
 import kaytrustweb from '../../assets/kaytrustweb.svg';
@@ -21,7 +19,35 @@ import { Router, Route, Switch, Redirect } from 'react-router';
 
 function Home() {
 
+  
+  const [visible, setVisible] = useState(false);
 
+  const hideMe = () => {
+    setVisible(!visible);
+  }
+
+  // function getRandomColor() {
+  //   var letters = '0123456789ABCDEF';
+  //   var color = '#';
+  //   for (var i = 0; i < 6; i++) {
+  //     color += letters[Math.floor(Math.random() * 16)];
+  //   }
+  //   return color;
+  // }
+  
+  function getRandomColor(){
+    var r = (Math.round(Math.random()* 127) + 127).toString(16);
+    var g = (Math.round(Math.random()* 127) + 127).toString(16);
+    var b = (Math.round(Math.random()* 127) + 127).toString(16);
+    return '#' + r + g + b;
+}
+
+  const color = getRandomColor();
+
+
+  console.log(color);
+  let style = { backgroundColor: color };
+  if (!visible) style.display = "none";
 
 
 
@@ -169,7 +195,7 @@ function Home() {
       </main>
       <Notification top={showNotification}></Notification>
       <input type="checkbox" id="menu-toggle" />
-      <label htmlFor="menu-toggle" className="menu-icon">
+      <label onClick={() => hideMe()} htmlFor="menu-toggle" className="menu-icon">
         <img className="menu-icon-img" src={menuIcon} alt="menu-icon" />
       </label>
       <label htmlFor="menu-toggle" className="label-icon-container">
@@ -184,6 +210,7 @@ function Home() {
             <span className="title-presentation animation-text">My name is<br></br> Anny Gutierrez.</span>
             <br></br>
             <span className="title-presentation animation-text">I develop apps & progams.</span>
+            <div className="rectangle-colorful" style={style}></div>
           </div>
 
           <div className="about-section">

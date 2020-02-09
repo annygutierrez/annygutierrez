@@ -5,6 +5,12 @@ body {
   background-color:#fafafa;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 .label-icon-container {
 
   position: fixed;
@@ -568,10 +574,20 @@ img {
     position: absolute;
   }
 
+  .rectangle-colorful {
+    width: 29em;
+    height: 2em;
+    position: absolute;
+    right: 4em;
+    z-index: -2;
+    bottom: -0.7em;
+    opacity: 0.7;
+  }
+
   .title-container {
-    background-image: url("assets/draw.svg");
+    /* background-image: url("assets/draw.svg");
     background-position: 100% -15%;
-    padding-bottom: 3em;
+    padding-bottom: 3em; */
   }
 
   .kayweb1 {
@@ -582,7 +598,7 @@ img {
   }
 
   .photo1 {
-    background-image: url("assets/kayweb1.svg");
+    background-image: url("assets/kayweb1.png");
     background-size: cover;
     background-position: center top;
   }
