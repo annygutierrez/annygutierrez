@@ -188,7 +188,7 @@ function Home() {
 
           <div className="about-section">
             <div className="about-head d-flex align-items-center pr-2">
-              <img className="arrow animation-text" src={arrow} alt="arrow-icon" />
+              <img className="arrow" src={arrow} alt="arrow-icon" />
               <span className="about-title animation-text">About me</span>
             </div>
             {/* <p className="about-description">I'm a software developer, currently focused on the development of hybrid mobile applications and developing in an environment with decentralized technologies in Everis Blockchain.</p> */}
