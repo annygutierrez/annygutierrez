@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.1aa49f7e.chunk.css",
-    "main.js": "/static/js/main.a3f8f3b7.chunk.js",
-    "main.js.map": "/static/js/main.a3f8f3b7.chunk.js.map",
+    "main.css": "/static/css/main.230c8295.chunk.css",
+    "main.js": "/static/js/main.b2ed7d89.chunk.js",
+    "main.js.map": "/static/js/main.b2ed7d89.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c05ffe79.js",
     "runtime-main.js.map": "/static/js/runtime-main.c05ffe79.js.map",
     "static/css/2.47e06e2e.chunk.css": "/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.25ce8240.chunk.js": "/static/js/2.25ce8240.chunk.js",
-    "static/js/2.25ce8240.chunk.js.map": "/static/js/2.25ce8240.chunk.js.map",
+    "static/js/2.28005ce0.chunk.js": "/static/js/2.28005ce0.chunk.js",
+    "static/js/2.28005ce0.chunk.js.map": "/static/js/2.28005ce0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.21251a74bc93f83f916ed52a5563260c.js": "/precache-manifest.21251a74bc93f83f916ed52a5563260c.js",
+    "precache-manifest.00d13f18e4005d36ea50d62c0be9f94e.js": "/precache-manifest.00d13f18e4005d36ea50d62c0be9f94e.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.1aa49f7e.chunk.css.map": "/static/css/main.1aa49f7e.chunk.css.map",
-    "static/js/2.25ce8240.chunk.js.LICENSE.txt": "/static/js/2.25ce8240.chunk.js.LICENSE.txt",
+    "static/css/main.230c8295.chunk.css.map": "/static/css/main.230c8295.chunk.css.map",
+    "static/js/2.28005ce0.chunk.js.LICENSE.txt": "/static/js/2.28005ce0.chunk.js.LICENSE.txt",
     "static/media/arrow.svg": "/static/media/arrow.3b70819e.svg",
-    "static/media/App.css": "/static/media/draw.d1d6630a.svg",
+    "static/media/App.css": "/static/media/people.9611aab9.svg",
     "static/media/kaytrust.svg": "/static/media/kaytrust.ff954aaf.svg",
     "static/media/kaytrustweb.svg": "/static/media/kaytrustweb.0360a849.svg",
-    "static/media/kayweb1.svg": "/static/media/kayweb1.2495b077.svg",
+    "static/media/kayweb1.svg": "/static/media/kayweb1.0a14155f.svg",
     "static/media/label-icon.svg": "/static/media/label-icon.ba0740a9.svg",
     "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
     "static/media/menu-icon.svg": "/static/media/menu-icon.642b85e2.svg",
-    "static/media/people.svg": "/static/media/people.9611aab9.svg",
     "static/media/user.svg": "/static/media/user.55814f91.svg",
     "static/media/wallet1.svg": "/static/media/wallet1.fe51fbef.svg",
     "static/media/world.svg": "/static/media/world.abaff9c3.svg"
@@ -30,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.c05ffe79.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.25ce8240.chunk.js",
-    "static/css/main.1aa49f7e.chunk.css",
-    "static/js/main.a3f8f3b7.chunk.js"
+    "static/js/2.28005ce0.chunk.js",
+    "static/css/main.230c8295.chunk.css",
+    "static/js/main.b2ed7d89.chunk.js"
   ]
 }
