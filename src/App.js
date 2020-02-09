@@ -22,6 +22,10 @@ import { Router, Route, Switch, Redirect } from 'react-router';
 import Home from './components/Home';
 import history from './utils/history';
 import { play, exit } from './timelines';
+import CSSPlugin from 'gsap/CSSPlugin';
+
+const C = CSSPlugin;  // here is the gotcha....
+
 
 const App = () => {
   console.log(history);
