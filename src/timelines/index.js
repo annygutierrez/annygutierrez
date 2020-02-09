@@ -6,7 +6,6 @@ window.loadPromise = new Promise(resolve => {
   })
 
 const getDefaultTimeline = (node, delay) => {
-    debugger;
   const timeline = new Timeline({ paused: true });
   const content = node.querySelector('.content');
   const contentInner = node.querySelector('.content--inner');
@@ -20,7 +19,6 @@ const getDefaultTimeline = (node, delay) => {
 }
 
 const getHomeTimeline = (node, delay) => {
-  debugger;
   const timeline = new Timeline({ paused: true });
   const texts = node.querySelectorAll('.animation-text');
   const texts2 = node.querySelectorAll('.proj-text');
@@ -37,7 +35,6 @@ const getHomeTimeline = (node, delay) => {
 }
 
 const getHomeTimeline2 = (node, delay) => {
-  debugger;
   const timeline = new Timeline({ paused: true });
   const texts = node.querySelectorAll('.animation-text');
   const texts2 = node.querySelectorAll('.proj-text');
@@ -54,7 +51,6 @@ const getHomeTimeline2 = (node, delay) => {
 }
 
 export const play = (pathname, node, appears) => {
-    debugger;
   const delay = appears ? 0 : 0.5;
   let timeline
   let timeline2
