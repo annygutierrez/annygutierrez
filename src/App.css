@@ -5,11 +5,11 @@ body {
   background-color:#fafafa;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
+/* @media screen and (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
 	}
-}
+} */
 
 .label-icon-container {
 
@@ -638,6 +638,7 @@ img {
     /* background-color: red; */
     width: 60vw;
       height: 100vh;
+      display: flex;
     /* background-image: url("assets/wallet.svg"); */
     /* background-repeat: no-repeat, repeat;
     background-size: cover;

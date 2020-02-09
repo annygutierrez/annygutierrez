@@ -26,6 +26,8 @@ function Home() {
     setVisible(!visible);
   }
 
+  useEffect(() => console.log('mounted'), []);
+
   // function getRandomColor() {
   //   var letters = '0123456789ABCDEF';
   //   var color = '#';
@@ -129,7 +131,7 @@ function Home() {
             </div>
           </div>
           <div className="texto photo2">
-            <img className="kayweb1" src={people} alt="kayweb1" />
+            {/* <img className="kayweb1" src={people} alt="kayweb1" /> */}
             <div className="project-description-scroll px-4 py-4">
               <p className="p-2 font-weight-bold proj-text">
                 <img className="icon-world mr-2" src={world} alt="world" />KayTrust
