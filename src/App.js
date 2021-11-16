@@ -9,6 +9,7 @@ import { useInput } from '../src/hooks/input-hook';
 import { Transition, TransitionGroup } from 'react-transition-group';
 import { Router, Route, Switch, Redirect } from 'react-router';
 import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import history from './utils/history';
 import { play, exit } from './timelines';
 import CSSPlugin from 'gsap/CSSPlugin';
@@ -32,6 +33,7 @@ const App = () => {
           <Router history={history} >
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route path="/potato-calendar/privacy-policy" component={PrivacyPolicy} />
             </Switch>
           </Router>
         </Transition>

@@ -69,8 +69,8 @@ export const play = (pathname, node, appears) => {
     .loadPromise
     .then(() => requestAnimationFrame(() => {
 
-      timeline.play();
-      timeline2.play();
+      if (timeline) timeline.play();
+      if (timeline2) timeline2.play();
     }))
 }
 
@@ -82,7 +82,7 @@ export const play = (pathname, node, appears) => {
 
 export const exit = (node) => {
   const timeline = new Timeline({ paused: true });
-
+  if (!timeline) return;
   timeline.to(node, 0.15, { autoAlpha: 0, ease: Power1.easeOut });
   timeline.play();
 }
