@@ -1,8 +1,17 @@
 import React from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
+  const history = useHistory();
+
     return (
         <div>
+<div style={{ position: 'fixed', zIndex: '1000000000000', top: 0, alignSelf: 'center', width: '100%', height: '1em', display: 'flex', justifyContent: 'center' }}>
+         <div onClick={() => history.push('/')} style={{ backgroundColor: '#FFA152', height: '3em', marginTop: '1em', alignItems: 'center', justifyContent: 'center', display: 'flex', padding: '0 10%', borderRadius: '2em' }}>
+         <p style={{ color: 'white', display: 'flex', textAlign: 'center', marginTop: '1em', textDecoration: 'underline', cursor: 'pointer' }}>Go back to home</p>
+         </div>
+         </div>
+          
         <div style={{ backgroundColor: '#07E1CA', padding: '4em' }}>
         <h1 style={{ color: 'white', fontWeight: 'bold', fontSize: '40px' }}>Potato Calendar</h1>
         <h2 style={{ color: 'white', fontWeight: 'bold', fontSize: '20px' }}>Privacy Policy</h2>

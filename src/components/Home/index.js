@@ -134,6 +134,12 @@ const Home = () => {
 
   return (
     <div className="main-container">
+      <div style={{ position: 'fixed', zIndex: '1000000000000', top: 0, alignSelf: 'center', width: '100%', height: '1em', display: 'flex', justifyContent: 'center' }}>
+         <div onClick={() => history.push('/potato-calendar/privacy-policy')} style={{ backgroundColor: '#E15307', height: '3em', marginTop: '1em', alignItems: 'center', justifyContent: 'center', display: 'flex', padding: '0 10%', borderRadius: '2em' }}>
+         <p style={{ color: 'white', display: 'flex', textAlign: 'center', marginTop: '1em', textDecoration: 'underline', cursor: 'pointer' }}>Potato Calendar Privacy Policy</p>
+         </div>
+      </div>
+      
       {/* <div className="horizontal-scroll-wrapper squares">
         <div className="div-item">item 1</div>
         <div className="div-item">item 2</div>
@@ -293,6 +299,7 @@ const Home = () => {
           <img className="user-image" src={user} alt="user-image" />
           <div className="title-container animation-text">
             <span className="title-presentation animation-text">Mi nombre es<br></br> Anny Gutierrez.</span>
+      
             <br></br>
             <span className="title-presentation animation-text" style={style}>Desarrollo apps & programas.</span>
             {/* <div className="rectangle-colorful" style={style}></div> */}
