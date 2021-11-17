@@ -32,7 +32,7 @@ const App = () => {
         >
           <Router history={history} >
             <Switch>
-              <Route path="/" component={Home} />
+              <Route exact path="/" component={Home} />
               <Route path="/potato-calendar/privacy-policy" component={PrivacyPolicy} />
               <Route path="/potato-calendar" component={PrivacyPolicy} />
             </Switch>

@@ -17,12 +17,14 @@ import Ingrid from '../../assets/ingrid.svg';
 import kaytrustweb from '../../assets/kaytrustweb.svg';
 import Notification from '../Notification';
 import { useInput } from '../../hooks/input-hook';
+import { useHistory, useParams } from 'react-router-dom';
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, TransitionGroup } from 'react-transition-group';
 import { Router, Route, Switch, Redirect } from 'react-router';
 
 import useDidMountEffect from '../../hooks/useDidMountEffect';
-function Home() {
+const Home = () => {
+  const history = useHistory();
 
   
   const [visible, setVisible] = useState(false);
@@ -37,6 +39,7 @@ function Home() {
 
   useDidMountEffect(() => {
     document.getElementById('menu-toggle').click();
+    if (activePage === 'Potato') return history.push('/potato-calendar/privacy-policy')
   }, [activePage]);
 
   const selectMenuItem = (routeName) => {
@@ -450,6 +453,7 @@ function Home() {
       <div className="slideout-sidebar d-flex align-items-center justify-content-center">
         <ul className="menu-list">
           <li className={`${activePage === 'Home' ? 'active-item' : ''}`} onClick={() => selectMenuItem('Home')}>Home</li>
+          <li className={`${activePage === 'Potato' ? 'active-item' : ''}`} onClick={() => selectMenuItem('Potato')}>Potato Calendar</li>
           {/* <li className={`${activePage === 'Proyectos' ? 'active-item' : ''}`} onClick={() => selectMenuItem('Proyectos')}>Proyectos</li>
           <li className={`${activePage === 'Educación' ? 'active-item' : ''}`} onClick={() => selectMenuItem('Educación')}>Educación</li> */}
           {/* <li className={`${activePage === 'Sobre mi' ? 'active-item' : ''}`} onClick={() => selectMenuItem('Sobre mi')}>Sobre mi</li> */}
