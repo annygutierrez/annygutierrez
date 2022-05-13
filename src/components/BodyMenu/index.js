@@ -1,9 +1,10 @@
 import React from 'react';
 import BodyMenuItem from '../BodyMenuItem';
+import './styles.css';
 
 const BodyMenu = ({ items, action, activeItem }) => {
     return (
-        <div style={{ justifyContent: 'center', textAlign: 'center', paddingTop: '1em' }}>
+        <div className="BodyMenuContainer">
           {
               items.map(item => <BodyMenuItem activeItem={activeItem} key={item.code} id={item.code} action={action} title={item.name} />)
           }

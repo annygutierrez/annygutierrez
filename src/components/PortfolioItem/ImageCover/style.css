@@ -1,0 +1,9 @@
+.ImageCoverImg {
+    width: 1000px;
+}
+
+@media screen and (max-width: 1052px) {
+    .ImageCoverImg {
+        width: 90%;
+    }
+}

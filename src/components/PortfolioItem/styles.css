@@ -1,0 +1,12 @@
+.PortfolioItemBottom {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    padding-top: 2em;
+}
+
+@media screen and (max-width: 1120px) {
+    .PortfolioItemBottom {
+        width: 90vw;
+    }
+  }

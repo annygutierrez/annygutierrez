@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderTitle from '../HeaderTitle';
+import MobileMenu from '../MobileMenu';
 import Socials from '../Socials';
+import './styles.css';
 
-const Header = () => {
+const Header = ({ menuItems, activePage, onNavigate }) => {
+    const [ showMenu, setShowMenu ] = useState(false);
+
+    const PressMenu = () => {
+        setShowMenu(!showMenu);
+    }
+
+    const goToPage = (id) => {
+        onNavigate(id);
+        PressMenu();
+    }
+
     return (
-        <div style={{ display: 'flex', padding: '1.4em 4em', justifyContent: 'space-between' }}>
-            <HeaderTitle />
+        <div className="HeaderContainer">
+            <HeaderTitle onPressMenu={PressMenu} />
+            {showMenu && <MobileMenu items={menuItems} activeItem={activePage} action={goToPage} />}
             <Socials />
         </div>
     )
