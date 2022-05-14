@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Body from '../../components/Body';
+import Footer from '../../components/Footer';
 
 const MenuItems = [
   {
@@ -36,6 +37,7 @@ const Home = () => {
     <div style={{ backgroundColor: 'white', width: '100vw', height: '100vh' }}>
       <Header onNavigate={SelectItem} activePage={activeId} menuItems={MenuItems} />
       <Body onNavigate={SelectItem} activePage={activeId} menuItems={MenuItems} />
+      <Footer />
     </div>
   )
 }

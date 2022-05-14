@@ -9,4 +9,10 @@
     .PortfolioItemBottom {
         width: 90vw;
     }
-  }
+}
+
+@media screen and (max-width: 731px) {
+    .PortfolioItemBottom {
+        flex-direction: column;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 const ToolsList = ({ items }) => {
     return (
@@ -6,8 +7,8 @@ const ToolsList = ({ items }) => {
             {
                 items.map(item => (
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                        <img style={{ width: '83px', height: 'auto' }} src={item.icon} alt={item.name} />
-                        <p style={{ color: '#37645A', fontFamily: 'Anton', fontSize: '20px', marginTop: '0.4em' }}>{item.name}</p>
+                        <img className="ToolsImg" src={item.icon} alt={item.name} />
+                        <p className="ToolsName">{item.name}</p>
                     </div>
                 ))
             }

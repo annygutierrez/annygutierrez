@@ -1,0 +1,30 @@
+.ToolsImg {
+    width: 83px;
+    height: auto;
+}
+
+.ToolsName {
+    color: #37645A;
+    font-family: 'Anton';
+    font-size: 20px;
+    margin-top: 0.4em
+}
+
+@media screen and (max-width: 1114px) {
+    .ToolsImg {
+      width: 3em;
+    }
+    .ToolsName {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ToolsImg {
+      width: 2em;
+    }
+    .ToolsName {
+        font-size: 13px;
+    }
+}
+

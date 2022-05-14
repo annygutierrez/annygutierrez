@@ -1,9 +1,10 @@
 import React from 'react';
 import CertTitle from '../CertTitle';
+import './styles.css';
 
 const CertDescription = ({ title, certLink, subtitle, description, type }) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 2, paddingLeft: '5em' }}>
+        <div className="CertDescriptionContainer">
             <CertTitle title={title} certLink={certLink} />
             <p style={{ fontFamily: 'Poppins', fontSize: '15px' }}>{subtitle}</p>
             <div>

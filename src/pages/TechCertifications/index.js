@@ -1,10 +1,11 @@
 import React  from 'react';
 import CertificationsItem from '../../components/CertificationsItem';
 import { CertificationsList } from './certificationsList';
+import './styles.css';
 
 const TechCertifications = () => {
     return (
-        <div style={{ display: 'flex', paddingTop: '5em', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="TechCertContainer">
           {
               CertificationsList.map(item => (
                 <CertificationsItem
