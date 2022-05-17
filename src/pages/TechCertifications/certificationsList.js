@@ -7,7 +7,7 @@ export const CertificationsList = [
     {
         title: 'Front-end developer',
         subtitle: 'Laboratoria 2017 - 2018',
-        description: 'Potato Calendar is a task management app to help you stay organized and manage your day-to-day. You can use this to do app to make shopping lists or task lists, plan an event. Potato Calendar makes it easy to stay organized and manage your life.',
+        description: 'Laboratoria es una organización de impacto social que trabaja para lograr una economía digital más diversa, inclusiva y competitiva, que abra oportunidades para que cada mujer pueda desarrollar su potencial.',
         type: 'Bootcamp',
         icon: Laboratoria,
         link: 'https://drive.google.com/file/d/1j21bz7jh5MELNUwR4iQaOOqbbWWcldrE/view'

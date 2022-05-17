@@ -11,7 +11,7 @@ const Body = ({ menuItems, activePage, onNavigate }) => {
     return (
         <div>
             <BodyMenu activeItem={activePage} action={onNavigate} items={menuItems} />
-            <Warning />
+            {/* <Warning /> */}
             {Boolean(activePage === 0) && <About />}
             {Boolean(activePage === 1) && <Portfolio />}
             {Boolean(activePage === 2) && <PersonalWork />}
