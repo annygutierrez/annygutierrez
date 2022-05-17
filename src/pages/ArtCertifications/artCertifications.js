@@ -4,20 +4,6 @@ import Indecopi from '../../assets/indecopi.svg';
 
 export const ArtCertificationsList = [
     {
-        title: 'Vector Illustration: Drawing with the Pen Tool',
-        subtitle: 'Skillshare',
-        description: 'Turn your drawings into clean and colorful vectors! Join illustrator Scott Martin and learn how to use the Pen Tool to transform your sketches into crisp and scalable vector images in Illustrator.',
-        type: 'Online Course',
-        icon: Skillshare
-    },
-    {
-        title: 'Easy Animation: After Effects',
-        subtitle: 'Skillshare',
-        description: 'Turn your drawings into clean and colorful vectors! Join illustrator Scott Martin and learn how to use the Pen Tool to transform your sketches into crisp and scalable vector images in Illustrator.',
-        type: 'Online Course',
-        icon: Skillshare
-    },
-    {
         title: 'Pencil Drawing for Superhero Comics',
         subtitle: 'Domestika',
         description: 'There are few Spanish-speaking artists who can say that they have gone through their hand characters such as Deadpool, Wolverine or Hulk. Salva Espín, with more than twenty Marvel comics behind him, is one of them and, in this course, will teach you the basics of sequential narrative, as well as his process to draw superheroes.',
@@ -56,5 +42,35 @@ export const ArtCertificationsList = [
         type: 'Video Conference',
         icon: Indecopi,
         link: 'http://servicio.indecopi.gob.pe/ecp/certificados/diaConsumidor/doc_202205091746455724.pdf'
+    },
+    {
+        title: 'Grandes ideas para Cómics Poderosos',
+        subtitle: 'Escuela Nacional Indecopi',
+        description: "Esta video conferencia se encuentra dirigida a jóvenes diseñadores, ilustradores, guionistas, profesionales involucrados con el mundo de los comics o historietas, estudiantes y ciudadanía en general con interés en el rubro de comics, con el objetivo de brindar conocimientos sobre la protección que les brinda la legislación de derecho de autor a los titulares de estas obras, así como conocer de primera mano cómo se desarrolla la narrativa e historia del cómic.",
+        type: 'Video Conference',
+        icon: Indecopi,
+        link: 'https://drive.google.com/file/d/1e-7aqDk5p8amr9LfIZ4pBPT5bWgT-L-R/view?usp=sharing'
+    },
+    {
+        title: 'Ilustración y Diagramación de Cómics',
+        subtitle: 'Escuela Nacional Indecopi',
+        description: "Esta video conferencia se encuentra dirigida a jóvenes diseñadores, ilustradores, guionistas, profesionales involucrados con el mundo de los comics o historietas, estudiantes y ciudadanía en general con interés en el rubro de comics, con el objetivo de brindar conocimientos sobre la protección que les brinda la legislación de derecho de autor a los titulares de estas obras, así como conocer de primera mano cómo se desarrolla la narrativa e historia del cómic.",
+        type: 'Video Conference',
+        icon: Indecopi,
+        link: 'https://drive.google.com/file/d/1_ZLC39bvYdhaRyVI09m0SxA-MiEBxp3x/view?usp=sharing'
+    },
+    {
+        title: 'Vector Illustration: Drawing with the Pen Tool',
+        subtitle: 'Skillshare',
+        description: 'Turn your drawings into clean and colorful vectors! Join illustrator Scott Martin and learn how to use the Pen Tool to transform your sketches into crisp and scalable vector images in Illustrator.',
+        type: 'Online Course',
+        icon: Skillshare
+    },
+    {
+        title: 'Easy Animation: After Effects',
+        subtitle: 'Skillshare',
+        description: 'Turn your drawings into clean and colorful vectors! Join illustrator Scott Martin and learn how to use the Pen Tool to transform your sketches into crisp and scalable vector images in Illustrator.',
+        type: 'Online Course',
+        icon: Skillshare
     }
 ]
