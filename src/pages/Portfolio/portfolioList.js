@@ -45,6 +45,7 @@ export const PortfolioList = [
         subtitle: 'KayTrust - Everis',
         description: 'KayTrust es una plataforma de confianza que permite gestionar las identidades digitales de tus clientes de manera segura, confiable y soberana.',
         cover: Kaytrust,
+        link: 'https://www.kaytrust.id/',
         tools: [
             {
                 name: 'React.js',
@@ -65,6 +66,7 @@ export const PortfolioList = [
         subtitle: 'KayTrust - Everis',
         description: 'KayTrust Wallet is a wallet for your digital identity, compatible with latest W3C Verifiable Credentials and Decentralized Identity open standards. Its security is guaranteed by an interoperable distributed ledger that is immutable and whose content is impossible to falsify.',
         cover: EverisId,
+        link: 'https://play.google.com/store/apps/details?id=com.everis.mytrust.app',
         tools: [
             {
                 name: 'React Native',
@@ -93,6 +95,7 @@ export const PortfolioList = [
         subtitle: 'KayTrust - Banco Interamericano (BID)',
         description: 'La aplicación es parte de LACChain y busca recopilar información relacionada al COVID-19 de ciudadanos de forma privada y anónima.',
         cover: David19,
+        link: 'https://mellamodavid19.org/en/',
         tools: [
             {
                 name: 'React Native',
@@ -149,6 +152,7 @@ export const PortfolioList = [
         subtitle: 'KayTrust - Aduanas Sudamericanas',
         description: 'El Proyecto Cadena es una web app que ayuda en la administración y conexión de las aduanas de: Perú, México, Colombia y Chile.',
         cover: Cadena,
+        link: 'https://publications.iadb.org/publications/spanish/document/Revista-Integracion--Comercio-Ano-24-No.-46-Octubre-2020-Blockchain-y-comercio-internacional-Nuevas-tecnologias-para-una-mayor-y-mejor-insercion-internacional-de-America-Latina.pdf',
         tools: [
             {
                 name: 'Angular',
@@ -205,6 +209,7 @@ export const PortfolioList = [
         subtitle: 'NTT Data - Prima AFP',
         description: 'Página web para realizar trámites virtuales  de una administradoras de fondos de pensiones del Perú.',
         cover: Prima,
+        link: 'https://miespacio.prima.com.pe/bienvenido',
         tools: [
             {
                 name: 'React.js',

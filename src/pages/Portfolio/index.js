@@ -13,6 +13,7 @@ const Portfolio = () => {
                   description={item.description}
                   image={item.cover}
                   tools={item.tools}
+                  projectLink={item.link}
                 />
               ))
           }
