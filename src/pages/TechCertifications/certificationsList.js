@@ -2,15 +2,24 @@ import Laboratoria from '../../assets/laboratoria.svg';
 import Londres from '../../assets/londres.svg';
 import Udemy from '../../assets/udemy.svg';
 import Cisco from '../../assets/cisco.svg';
+import Platzi from '../../assets/platziIcon.svg';
 
 export const CertificationsList = [
     {
         title: 'Front-end developer',
         subtitle: 'Laboratoria 2017 - 2018',
-        description: 'Laboratoria es una organización de impacto social que trabaja para lograr una economía digital más diversa, inclusiva y competitiva, que abra oportunidades para que cada mujer pueda desarrollar su potencial.',
+        description: 'Laboratoria is a social organization that works to achieve a more diverse, inclusive and competitive digital economy that opens up opportunities for women to develop their potential.',
         type: 'Bootcamp',
         icon: Laboratoria,
         link: 'https://drive.google.com/file/d/1j21bz7jh5MELNUwR4iQaOOqbbWWcldrE/view'
+    },
+    {
+        title: 'Introduction to C',
+        subtitle: 'Platzi 2022',
+        description: 'Master the basics of the general purpose programming language used to program microcontrollers and operating systems.',
+        type: 'Online Course',
+        icon: Platzi,
+        link: 'https://platzi.com/p/annygutierrez/curso/1936-lenguaje-c/diploma/detalle/'
     },
     {
         title: 'Introduction to Computer Programming',
