@@ -5,7 +5,7 @@
     border-bottom: 2px solid #EFEFEF;
 }
 
-@media screen and (max-width: 632px) {
+@media screen and (max-width: 740px) {
     .MobileMenuContainer {
       display: flex;
       flex-direction: column;

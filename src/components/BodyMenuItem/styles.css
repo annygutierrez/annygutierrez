@@ -1,0 +1,15 @@
+.BodyMenuItemText {
+    font-size: 25px;
+}
+
+@media screen and (max-width: 900px) {
+    .BodyMenuItemText {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .BodyMenuItemText {
+        font-size: 25px;
+    }
+}

@@ -19,11 +19,15 @@ const MenuItems = [
   {
       name: 'Certifications',
       code: 3
-  }
-  // {
-  //     name: 'Experience',
-  //     code: 4
-  // }
+  },
+  {
+      name: 'Experience',
+      code: 4
+  },
+  {
+    name: 'Education',
+    code: 5
+}
 ];
 
 const Home = () => {
