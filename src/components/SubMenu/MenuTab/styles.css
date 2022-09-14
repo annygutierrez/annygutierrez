@@ -14,7 +14,7 @@
     }
 }
 
-@media screen and (max-width: 406px) {
+@media screen and (max-width: 530px) {
     .MenuTabContainer {
         flex-direction: column;
     }

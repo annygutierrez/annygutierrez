@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SubMenu from '../../components/SubMenu';
 import ArtCertifications from '../ArtCertifications';
+import LanguageCert from '../LanguageCert';
 import TechCertifications from '../TechCertifications';
 
 const Certifications = () => {
@@ -16,8 +17,12 @@ const Certifications = () => {
             code: 1
         },
         {
-            name: 'Art & Design',
+            name: 'Language',
             code: 2
+        },
+        {
+            name: 'Art & Design',
+            code: 3
         }
     ];
 
@@ -29,7 +34,8 @@ const Certifications = () => {
         <div>
            <SubMenu action={SelectItem} activeItem={activeId} items={MenuItems} />
            {Boolean(activeId === 1) && <TechCertifications />}
-           {Boolean(activeId === 2) && <ArtCertifications />}
+           {Boolean(activeId === 2) && <LanguageCert />}
+           {Boolean(activeId === 3) && <ArtCertifications />}
         </div>
     )
 }
