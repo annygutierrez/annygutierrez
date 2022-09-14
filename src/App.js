@@ -4,8 +4,11 @@ import { Router, Route, Switch } from 'react-router';
 import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import history from './utils/history';
+import ReactGA from 'react-ga';
 
+const TRACKING_ID = "UA-241150928-1";
 
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   return (

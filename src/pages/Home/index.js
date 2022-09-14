@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import Body from '../../components/Body';
 import Footer from '../../components/Footer';
+import ReactGA from 'react-ga';
 
 const MenuItems = [
   {
@@ -32,6 +33,10 @@ const MenuItems = [
 
 const Home = () => {
   const [activeId, setActiveId] = useState(0);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
     const SelectItem = (id) => {
        setActiveId(id);
