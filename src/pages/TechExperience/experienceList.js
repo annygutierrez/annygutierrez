@@ -11,7 +11,7 @@ export const ExperienceList = [
         description: 'We work on digital tools projects to imrpove the efficiency of procedures.',
         type: 'Consulting Firm',
         clients: 'Prima AFP (BCP)',
-        tools: 'Blockchain, Ethereum, IPFS, React Native, Solidity, MongoDB, Node.js, Linux, React.js, Angular, Styled-components, Sass, Redux and React Hooks.',
+        tools: 'Blockchain, Ethereum, IPFS, React Native, Kotlin, Swift, Solidity, MongoDB, Node.js, Linux, React.js, Angular, Styled-components, Sass, Redux and React Hooks.',
         icon: NTTData,
         link: 'https://www.nttdata.com/global/en/'
     },
@@ -21,7 +21,7 @@ export const ExperienceList = [
         tags: ['Blockchain Team', 'Frontend'],
         description: 'We work on decentralized apps and digital tools projects, based on Blockchain technologies, we seek to be synonymous with disruption in the technological community in Latin America and the world.',
         type: 'Consulting Firm',
-        tools: 'Blockchain, Ethereum, IPFS, React Native, Solidity, MongoDB, Node.js, Linux, React.js, Angular, Styled-components, Sass, Redux and React Hooks.',
+        tools: 'Blockchain, Ethereum, IPFS, React Native, Kotlin, Swift, Solidity, MongoDB, Node.js, Linux, React.js, Angular, Styled-components, Sass, Redux and React Hooks.',
         icon: Everis,
         clients: 'KayTrust',
         link: 'https://www.linkedin.com/company/everis/?originalSubdomain=es'

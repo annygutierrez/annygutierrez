@@ -5,10 +5,11 @@ import Potato from '../../assets/potato.png';
 export const PersonalWorkList = [
     {
         title: 'Potato Calendar',
-        subtitle: 'To Do list',
+        subtitle: 'To Do list [Deprecated]',
+        tags: ['Deprecated since 2023'],
         description: 'Potato Calendar is a task management app to help you stay organized and manage your day-to-day. You can use this to do app to make shopping lists or task lists, plan an event. Potato Calendar makes it easy to stay organized and manage your life.',
         cover: Potato,
-        projectLink: 'https://play.google.com/store/apps/details?id=com.potatocalendar',
+        // projectLink: 'https://play.google.com/store/apps/details?id=com.potatocalendar',
         tools: [
             {
                 name: 'React Native',

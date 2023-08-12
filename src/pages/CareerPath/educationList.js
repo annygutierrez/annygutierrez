@@ -9,7 +9,7 @@ import UPCiencias from '../../assets/upc.svg';
 export const EducationList = [
     {
         title: 'Universidad Peruana de Ciencias Aplicadas',
-        subtitle: '2022 - Present',
+        subtitle: 'Aug 2023 - Present',
         tags: ['Systems Engineering'],
         description: `La Universidad Peruana de Ciencias Aplicadas (UPC) es una universidad privada fundada el 5 de enero de 1994 y ubicada en la ciudad de Lima`,
         type: 'University',

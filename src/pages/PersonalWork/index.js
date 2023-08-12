@@ -13,6 +13,7 @@ const PersonalWork = () => {
                   description={item.description}
                   image={item.cover}
                   tools={item.tools}
+                  tags={item.tags}
                   projectLink={item.projectLink}
                 />
               ))

@@ -1,5 +1,6 @@
 import Britanico from '../../assets/brit.svg';
 import Cambridge from '../../assets/cambridge.svg';
+import CasaRusa from '../../assets/casarusa.svg';
 
 export const CertificationsList = [
     {
@@ -9,6 +10,14 @@ export const CertificationsList = [
         type: 'International Exam',
         icon: Cambridge,
         link: 'https://drive.google.com/file/d/1pi3kHi93DFMN1vBRu4P2MM0ZuDdOyoUj/view?usp=sharing'
+    },
+    {
+        title: 'Elementary Russian A1',
+        subtitle: 'Jun 2023',
+        description: `A1 Elementary russian exam.`,
+        type: 'Language Course',
+        icon: CasaRusa,
+        link: 'https://drive.google.com/file/d/1RmKdT3AMkrDDtSQc5brbceBKF1HqXX97/view'
     },
     {
         title: 'Británico Advanced English B2',
