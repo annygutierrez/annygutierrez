@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/annygutierrez/annygutierrez/compare/v0.1.2...v0.1.3) (2023-10-10)
+
+
+### Features
+
+* add french alliance item ([4fea807](https://github.com/annygutierrez/annygutierrez/commit/4fea8075279eadd369495df1b51bbff82cca8179))
+
 ### [0.1.2](https://github.com/annygutierrez/annygutierrez/compare/v0.1.1...v0.1.2) (2023-08-12)
 
 
