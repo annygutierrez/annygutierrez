@@ -11,7 +11,7 @@ const About = () => {
                <div style={{ paddingTop: '1em' }}>
                    <p style={{ fontFamily: 'Roboto', fontSize: '14px' }}>Hi! My name is Anny Gutierrez, and I’ve been working in the IT industry since 2018, when I was 19 years old. </p>
                    <p style={{ fontFamily: 'Roboto', fontSize: '14px' }}>In my still short working experience, I handled several and very different positions, such as housekeeper, luthier, waitress, cart attendant, front-end developer, mobile developer, back-end developer, designer (every now and then).</p>
-                   <p style={{ fontFamily: 'Roboto', fontSize: '14px' }}>These jobs were very important for me to develop the skills I'm currently making use of as a team member, as a leader and as a technology consultant.</p>
+                   <p style={{ fontFamily: 'Roboto', fontSize: '14px' }}>These jobs were very important for me to develop the skills I'm currently making use of as a team member and technology consultant.</p>
                </div>
            </div>
            <div className="AboutImgContainer">

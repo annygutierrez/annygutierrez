@@ -5,6 +5,7 @@ import Laboratoria from '../../assets/laboratoria.svg';
 import Goethe from '../../assets/goethe.svg';
 import CasaRusa from '../../assets/casarusa.svg';
 import UPCiencias from '../../assets/upc.svg';
+import FrenchAlliance from '../../assets/alianza.svg';
 
 export const EducationList = [
     {
@@ -17,8 +18,17 @@ export const EducationList = [
         link: 'https://www.upc.edu.pe/'
     },
     {
+        title: 'Alianza Francesa de Lima',
+        subtitle: 'Oct 2023 - Present',
+        tags: ['Basic French'],
+        description: `La Alianza Francesa de Lima es una asociación cultural sin fines de lucro, dedicada, desde hace más de 120 años.`,
+        type: 'Language Institute',
+        icon: FrenchAlliance,
+        link: 'https://www.aflima.org.pe/'
+    },
+    {
         title: 'La Casa de Rusia en Lima',
-        subtitle: 'Oct 2022 - Present',
+        subtitle: 'Oct 2022 - Oct 2023',
         tags: ['Basic Russian'],
         description: `Representación de la Agencia Federal Rossotrudnichestvo en el Perú.`,
         type: 'Language Institute',
