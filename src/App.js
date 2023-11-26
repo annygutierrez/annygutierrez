@@ -15,8 +15,8 @@ const App = () => {
   return (
           <Router history={history} >
             <Switch>
-              <Route exact path="/" component={Notes} />
-              {/* <Route exact path="/" component={Home} /> */}
+              {/* <Route exact path="/" component={Notes} /> */}
+              <Route exact path="/" component={Home} />
               <Route path="/potato-calendar/privacy-policy" component={PrivacyPolicy} />
               <Route path="/potato-calendar" component={PrivacyPolicy} />
             </Switch>
