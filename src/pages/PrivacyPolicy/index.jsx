@@ -1,13 +1,13 @@
 import React from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
     return (
         <div>
 <div style={{ position: 'fixed', zIndex: '1000000000000', top: 0, alignSelf: 'center', width: '100%', height: '1em', display: 'flex', justifyContent: 'center' }}>
-         <div onClick={() => history.push('/')} style={{ backgroundColor: '#FFA152', height: '3em', marginTop: '1em', alignItems: 'center', justifyContent: 'center', display: 'flex', padding: '0 10%', borderRadius: '2em' }}>
+         <div onClick={() => navigate('/')} style={{ backgroundColor: '#FFA152', height: '3em', marginTop: '1em', alignItems: 'center', justifyContent: 'center', display: 'flex', padding: '0 10%', borderRadius: '2em' }}>
          <p style={{ color: 'white', display: 'flex', textAlign: 'center', marginTop: '1em', textDecoration: 'underline', cursor: 'pointer' }}>Go back to home</p>
          </div>
          </div>
