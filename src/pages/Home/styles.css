@@ -92,11 +92,20 @@
   color: var(--home-accent);
 }
 
-.home__contact {
+/* Top-right bar: language menu + contact, on one line. */
+.home > .home__top {
   position: absolute;
   top: clamp(1.5rem, 5.5vh, 3rem);
   right: clamp(1.5rem, 4vw, 4rem);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: clamp(1.75rem, 3vw, 3rem);
+}
+
+.home__contact {
   font-size: 1.15rem;
+  line-height: 1;
 }
 
 .home__title {

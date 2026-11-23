@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import LanguageSwitcher from '../../components/LanguageSwitcher';
+import { useLanguage } from '../../i18n/LanguageContext';
 import workshopBg from '../../assets/home-bg.jpg';
 import studioBg from '../../assets/home-bg-studio.jpg';
 import './styles.css';
@@ -13,26 +15,17 @@ const BACKGROUNDS = {
 };
 const BACKGROUND = BACKGROUNDS.studio;
 
-const MAKES = [
-  'websites',
-  'mobile apps',
-  'mobile games',
-  'steam games',
-  'drawings',
-  'robots',
-  'paintings',
-  'music',
-  'poems',
-  'micro-stories',
-];
-
 // TODO: point these to their real destinations.
 const LINKS = {
   aboutMe: '#',
   contact: '#',
 };
 
+// The title and the list of things Anny makes are translated in src/i18n/translations.js (home.*).
 const Home = () => {
+  const { t } = useLanguage();
+  const makes = t('home.makes');
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
   }, []);
@@ -45,22 +38,25 @@ const Home = () => {
         aria-hidden="true"
       />
       <div className="home__light" aria-hidden="true" />
-      <a className="home__contact" href={LINKS.contact}>contact</a>
+      <div className="home__top">
+        <LanguageSwitcher />
+        <a className="home__contact" href={LINKS.contact}>{t('nav.contact')}</a>
+      </div>
 
       <section className="home__content">
-        <h1 className="home__title">anny gutierrez-lopez makes:</h1>
+        <h1 className="home__title">{t('home.title')}</h1>
 
         <p className="home__makes">
-          {MAKES.map((item, i) => (
+          {makes.map((item, i) => (
             <React.Fragment key={item}>
               <span className="home__make">{item}</span>
-              {i < MAKES.length - 1 && ', '}
+              {i < makes.length - 1 && ', '}
             </React.Fragment>
           ))}
         </p>
 
         <Link className="home__works" to="/major-works">
-          major works
+          {t('nav.majorWorks')}
           <svg className="home__works-icon" viewBox="0 0 20 20" aria-hidden="true">
             <rect x="1" y="1" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" />
             <path d="M6 14 L14 6 M8 6 H14 V12" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -68,7 +64,7 @@ const Home = () => {
         </Link>
       </section>
 
-      <a className="home__about" href={LINKS.aboutMe}>about me</a>
+      <a className="home__about" href={LINKS.aboutMe}>{t('nav.aboutMe')}</a>
     </main>
   );
 };
