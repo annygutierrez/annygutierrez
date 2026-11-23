@@ -1,34 +1,88 @@
 .home {
   --home-pad-x: clamp(1.5rem, 7vw, 7rem);
-  --home-accent: #f08a6c;
+  /* Hover colour. */
+  --home-accent: #fff;
 
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   padding: clamp(6rem, 16vh, 9.5rem) var(--home-pad-x) 6rem;
   background-color: #2a2622;
-  background-size: cover;
-  background-position: center;
   color: #fff;
   font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
   overflow: hidden;
-}
-
-/* Darkens the photo so the white text stays readable. */
-.home::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 16, 12, 0.5);
-  pointer-events: none;
+  isolation: isolate;
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .home > * {
   position: relative;
 }
 
+/* Background photo with a slow "Ken Burns" camera move (zoom + pan), so it feels like footage. */
+.home__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-size: cover;
+  background-position: center;
+  transform-origin: 60% 45%;
+  will-change: transform;
+  animation: home-camera 20s ease-in-out infinite alternate;
+}
+
+@keyframes home-camera {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
+  100% { transform: scale(1.1) translate3d(1.5%, 0.5%, 0); }
+}
+
+/* Soft drifting light, like sunlight moving through the studio windows. */
+.home__light {
+  position: absolute;
+  inset: -20%;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 30% 28% at 72% 38%, rgba(255, 236, 200, 0.22), transparent 70%),
+    radial-gradient(ellipse 25% 22% at 85% 62%, rgba(255, 250, 235, 0.16), transparent 70%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  animation: home-light 10s ease-in-out infinite alternate;
+}
+
+@keyframes home-light {
+  0%   { transform: translate3d(-4%, -2%, 0); opacity: 0.7; }
+  50%  { opacity: 1; }
+  100% { transform: translate3d(5%, 3%, 0); opacity: 0.8; }
+}
+
+/* Darkens the photo so the white text stays readable: strongest on the left, where the text sits. */
+.home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg,
+      rgba(20, 16, 12, 0.78) 0%,
+      rgba(20, 16, 12, 0.66) 35%,
+      rgba(20, 16, 12, 0.4) 65%,
+      rgba(20, 16, 12, 0.32) 100%),
+    linear-gradient(180deg, rgba(20, 16, 12, 0.25) 0%, transparent 18%);
+  pointer-events: none;
+}
+
+/* Respect users who ask their OS for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .home__bg,
+  .home__light {
+    animation: none;
+  }
+}
+
 .home a {
   color: inherit;
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -56,17 +110,27 @@
 .home__makes {
   max-width: 34rem;
   margin: 0 0 3.5rem 0.5rem;
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.home__makes,
+.home__make {
+  transition: color 0.2s ease;
 }
 
 .home__make {
-  transition: color 0.2s ease;
   cursor: default;
 }
 
-.home__make:hover {
+/* While hovering the list, dim everything (commas included) except the item under the cursor. */
+.home__makes:has(.home__make:hover) {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.home__makes .home__make:hover {
   color: var(--home-accent);
 }
 
@@ -76,6 +140,7 @@
   gap: 0.6rem;
   margin-left: 0.5rem;
   font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .home__works-icon {
@@ -91,7 +156,7 @@
 }
 
 @media (max-width: 600px) {
-  .home__makes {
-    line-height: 1.2;
+  .home::before {
+    background: rgba(20, 16, 12, 0.66);
   }
 }

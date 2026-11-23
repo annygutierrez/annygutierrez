@@ -7,17 +7,12 @@ const MAKES = [
   'websites',
   'mobile apps',
   'mobile games',
+  'steam games',
   'drawings',
-  'novels',
-  'tales',
-  'articles',
   'robots',
   'paintings',
-  'essays',
-  'education founding for peruvians',
-  'cultural events for latin-america',
   'music',
-  'moviescripts',
+  'micro-stories',
 ];
 
 // TODO: point these to their real destinations.
@@ -33,7 +28,9 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="home" style={{ backgroundImage: `url(${background})` }}>
+    <main className="home">
+      <div className="home__bg" style={{ backgroundImage: `url(${background})` }} aria-hidden="true" />
+      <div className="home__light" aria-hidden="true" />
       <a className="home__contact" href={LINKS.contact}>contact</a>
 
       <section className="home__content">

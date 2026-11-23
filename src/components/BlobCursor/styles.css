@@ -1,0 +1,72 @@
+/* Hide the native cursor only while the blob is active (mouse/trackpad devices). */
+.has-blob-cursor,
+.has-blob-cursor * {
+  cursor: none !important;
+}
+
+/* Outer element: follows the pointer (position set from JS). */
+.blob-cursor {
+  /* Colour from the Figma design; size scaled down from its 112×101, keeping the proportion. */
+  --blob-width: 56px;
+  --blob-height: 50px;
+  --blob-color: #008cff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  /* Difference blend: shows what's underneath "in negative", tinted by the blob colour
+     (white text → orange, light wood → magenta, dark areas → blue). */
+  mix-blend-mode: difference;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blob-cursor.is-visible {
+  opacity: 1;
+}
+
+/* Inner element: the organic shape, centred on the pointer. */
+.blob-cursor__shape {
+  width: var(--blob-width);
+  height: var(--blob-height);
+  margin: calc(var(--blob-height) / -2) 0 0 calc(var(--blob-width) / -2);
+  background: var(--blob-color);
+  border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: blob-morph 6s ease-in-out infinite alternate, blob-spin 14s linear infinite;
+}
+
+/* Grows a lot over links/buttons (about me, major works, contact), since the native pointer hand is hidden. */
+.blob-cursor.is-hovering .blob-cursor__shape {
+  transform: scale(2.4);
+}
+
+.blob-cursor.is-pressed .blob-cursor__shape {
+  transform: scale(0.8);
+}
+
+.blob-cursor.is-hovering.is-pressed .blob-cursor__shape {
+  transform: scale(2.1);
+}
+
+@keyframes blob-morph {
+  0%   { border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%; }
+  33%  { border-radius: 63% 37% 45% 55% / 58% 62% 38% 42%; }
+  66%  { border-radius: 38% 62% 56% 44% / 40% 55% 45% 60%; }
+  100% { border-radius: 55% 45% 38% 62% / 62% 42% 58% 38%; }
+}
+
+@keyframes blob-spin {
+  to { rotate: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-cursor__shape {
+    animation: none;
+    border-radius: 50%;
+  }
+}
