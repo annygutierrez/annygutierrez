@@ -1,0 +1,97 @@
+.home {
+  --home-pad-x: clamp(1.5rem, 7vw, 7rem);
+  --home-accent: #f08a6c;
+
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(6rem, 16vh, 9.5rem) var(--home-pad-x) 6rem;
+  background-color: #2a2622;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Darkens the photo so the white text stays readable. */
+.home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 12, 0.5);
+  pointer-events: none;
+}
+
+.home > * {
+  position: relative;
+}
+
+.home a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.home a:hover,
+.home a:focus-visible {
+  color: var(--home-accent);
+}
+
+.home__contact {
+  position: absolute;
+  top: clamp(1.5rem, 5.5vh, 3rem);
+  right: clamp(1.5rem, 4vw, 4rem);
+  font-size: 1.15rem;
+}
+
+.home__title {
+  margin: 0 0 2rem;
+  font-size: clamp(2.25rem, 4.3vw, 4.75rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.home__makes {
+  max-width: 34rem;
+  margin: 0 0 3.5rem 0.5rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.home__make {
+  transition: color 0.2s ease;
+  cursor: default;
+}
+
+.home__make:hover {
+  color: var(--home-accent);
+}
+
+.home__works {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.home__works-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.home__about {
+  position: absolute;
+  left: calc(var(--home-pad-x) + 0.5rem);
+  bottom: clamp(1.5rem, 9vh, 5.5rem);
+  font-size: 1.15rem;
+}
+
+@media (max-width: 600px) {
+  .home__makes {
+    line-height: 1.2;
+  }
+}
