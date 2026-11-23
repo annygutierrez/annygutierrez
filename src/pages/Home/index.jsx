@@ -1,7 +1,16 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import background from '../../assets/home-bg.jpg';
+import workshopBg from '../../assets/home-bg.jpg';
+import studioBg from '../../assets/home-bg-studio.jpg';
 import './styles.css';
+
+// Available backgrounds. `position` is the CSS background-position: which part of the photo stays
+// in view when the screen crops it (e.g. a portrait photo on a landscape screen).
+const BACKGROUNDS = {
+  workshop: { src: workshopBg, position: 'center' },
+  studio: { src: studioBg, position: 'center 70%' },
+};
+const BACKGROUND = BACKGROUNDS.studio;
 
 const MAKES = [
   'websites',
@@ -29,7 +38,11 @@ const Home = () => {
 
   return (
     <main className="home">
-      <div className="home__bg" style={{ backgroundImage: `url(${background})` }} aria-hidden="true" />
+      <div
+        className="home__bg"
+        style={{ backgroundImage: `url(${BACKGROUND.src})`, backgroundPosition: BACKGROUND.position }}
+        aria-hidden="true"
+      />
       <div className="home__light" aria-hidden="true" />
       <a className="home__contact" href={LINKS.contact}>contact</a>
 
