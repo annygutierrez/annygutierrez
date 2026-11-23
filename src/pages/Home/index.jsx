@@ -21,6 +21,7 @@ const MAKES = [
   'robots',
   'paintings',
   'music',
+  'poems',
   'micro-stories',
 ];
 

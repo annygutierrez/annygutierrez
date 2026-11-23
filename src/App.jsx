@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Notes from './pages/Notes';
-import PrivacyPolicy from './pages/PrivacyPolicy';
 import BlobCursor from './components/BlobCursor';
 import ReactGA from 'react-ga';
 
@@ -17,8 +16,6 @@ const App = () => {
             <Routes>
               {/* <Route path="/" element={<Notes />} /> */}
               <Route path="/" element={<Home />} />
-              <Route path="/potato-calendar/privacy-policy/*" element={<PrivacyPolicy />} />
-              <Route path="/potato-calendar/*" element={<PrivacyPolicy />} />
             </Routes>
             <BlobCursor />
           </BrowserRouter>
