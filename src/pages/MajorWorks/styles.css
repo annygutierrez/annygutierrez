@@ -1,4 +1,9 @@
 .works {
+  /* Same warm palette as the home page: its overlay is rgba(20, 16, 12, …). */
+  --works-ink: #14100c;
+  --works-paper: #f4f0ea;
+  --works-text: #2b2622;
+
   position: relative;
   display: grid;
   grid-template-columns: 48.5% 1fr;
@@ -7,15 +12,46 @@
   font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Left: dark list panel. */
+/* Left: list panel over a blurred, slowly moving photo (same mood as the home page). */
 .works__nav {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   min-height: 0;
   padding: clamp(2rem, 6vh, 3.25rem) clamp(1.5rem, 3vw, 2.75rem) clamp(2rem, 9vh, 5.5rem);
-  background: #1f1f1f;
+  background-color: var(--works-ink);
   color: #fff;
-  overflow-y: auto;
+  overflow: hidden;
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.works__backdrop {
+  position: absolute;
+  inset: -40px; /* bleed past the edges so the blur has no light border */
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  filter: blur(7px) saturate(0.9);
+  transform-origin: 45% 50%;
+  will-change: transform;
+  animation: works-camera 20s ease-in-out infinite alternate;
+}
+
+@keyframes works-camera {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
+  100% { transform: scale(1.09) translate3d(1.5%, 0.5%, 0); }
+}
+
+/* Warm overlay, as on the home page. */
+.works__nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(20, 16, 12, 0.7);
+  pointer-events: none;
 }
 
 .works__heading {
@@ -27,30 +63,43 @@
 }
 
 .works__list {
+  min-height: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-y: auto;
 }
 
+/* Same type as the home list: medium weight, white; the selected work stays bright, the rest are dimmed. */
 .works__item {
   display: block;
   width: 100%;
-  margin: 0 0 1rem;
+  margin: 0 0 0.9rem;
   padding: 0;
   border: 0;
   background: none;
-  color: #9b9b9b;
+  color: rgba(255, 255, 255, 0.5);
   font: inherit;
-  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
-  line-height: 1.05;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.2;
   text-align: left;
   transition: color 0.2s ease;
 }
 
-.works__item:hover,
+.works__item.is-active,
 .works__item:focus-visible,
-.works__item.is-active {
+.works__list .works__item:hover {
   color: #fff;
+}
+
+/* Like the home list: while hovering, only the hovered work is bright. */
+.works__list:has(.works__item:hover) .works__item.is-active:not(:hover) {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.works__item-client {
+  font-weight: 400;
 }
 
 .works__item:focus {
@@ -84,8 +133,8 @@
 
 /* Language menu: top-right corner of the white panel, same spot as on the home page. */
 .works__lang {
-  --lang-color: #2f2f2f;
-  --lang-menu-bg: rgba(255, 255, 255, 0.92);
+  --lang-color: var(--works-text);
+  --lang-menu-bg: rgba(244, 240, 234, 0.95);
 
   position: absolute;
   top: clamp(1.5rem, 5.5vh, 3rem);
@@ -94,15 +143,15 @@
 }
 
 .works__lang .lang__menu {
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 24px rgba(20, 16, 12, 0.1);
 }
 
-/* Right: white detail panel, scrolls on its own. */
+/* Right: paper-white detail panel (warm, like the studio walls), scrolls on its own. */
 .works__detail {
   min-height: 0;
-  padding: clamp(2rem, 8vh, 4.25rem) clamp(1.5rem, 6.5vw, 6rem) 4rem;
-  background: #fff;
-  color: #2f2f2f;
+  padding: clamp(5rem, 17vh, 9.5rem) clamp(1.5rem, 6.5vw, 6rem) 4rem;
+  background: var(--works-paper);
+  color: var(--works-text);
   overflow-y: auto;
   animation: works-detail-in 0.35s ease both;
 }
@@ -135,8 +184,62 @@
   height: auto;
 }
 
+/* "next →" + the next work's title, at the end of the article. */
+.works__next {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 34.5rem;
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 0;
+  border: 0;
+  border-top: 1px solid rgba(43, 38, 34, 0.18);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.works__next:focus {
+  outline: none;
+}
+
+.works__next:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 6px;
+}
+
+.works__next-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.works__next-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.works__next-name {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.works__next:hover .works__next-arrow,
+.works__next:focus-visible .works__next-arrow {
+  transform: translateX(6px);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .works__detail {
+  .works__detail,
+  .works__backdrop {
     animation: none;
   }
 }
@@ -148,8 +251,8 @@
     height: auto;
   }
 
-  .works__nav,
-  .works__detail {
+  .works__detail,
+  .works__list {
     overflow: visible;
   }
 
@@ -166,6 +269,6 @@
   /* On narrow screens the top-right corner is over the dark list panel. */
   .works__lang {
     --lang-color: #fff;
-    --lang-menu-bg: rgba(31, 31, 31, 0.95);
+    --lang-menu-bg: rgba(20, 16, 12, 0.92);
   }
 }
