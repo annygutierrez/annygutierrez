@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import workshopBg from '../../assets/home-bg.jpg';
 import studioBg from '../../assets/home-bg-studio.jpg';
@@ -27,7 +28,6 @@ const MAKES = [
 
 // TODO: point these to their real destinations.
 const LINKS = {
-  majorWorks: '#',
   aboutMe: '#',
   contact: '#',
 };
@@ -59,13 +59,13 @@ const Home = () => {
           ))}
         </p>
 
-        <a className="home__works" href={LINKS.majorWorks}>
+        <Link className="home__works" to="/major-works">
           major works
           <svg className="home__works-icon" viewBox="0 0 20 20" aria-hidden="true">
             <rect x="1" y="1" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" />
             <path d="M6 14 L14 6 M8 6 H14 V12" fill="none" stroke="currentColor" strokeWidth="1.5" />
           </svg>
-        </a>
+        </Link>
       </section>
 
       <a className="home__about" href={LINKS.aboutMe}>about me</a>

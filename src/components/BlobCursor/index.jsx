@@ -5,6 +5,8 @@ import './styles.css';
 const POINTER_QUERY = '(hover: hover) and (pointer: fine)';
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const INTERACTIVE = 'a, button, [role="button"], input, textarea, select, label';
+// Elements marked data-cursor="plain" (e.g. list rows) don't make the blob grow.
+const PLAIN = '[data-cursor="plain"]';
 // How fast the blob catches up with the pointer each frame (1 = instantly).
 const FOLLOW = 0.2;
 
@@ -47,7 +49,8 @@ const BlobCursor = () => {
       target.x = e.clientX;
       target.y = e.clientY;
       blob.classList.add('is-visible');
-      blob.classList.toggle('is-hovering', !!e.target.closest?.(INTERACTIVE));
+      const el = e.target;
+      blob.classList.toggle('is-hovering', !!el.closest?.(INTERACTIVE) && !el.closest?.(PLAIN));
     };
     const onLeave = () => blob.classList.remove('is-visible');
     const onDown = () => blob.classList.add('is-pressed');
