@@ -25,6 +25,12 @@
   transition: opacity 0.3s ease;
 }
 
+/* On phones/tablets the finger covers part of the blob, so it's a bit bigger. */
+.blob-cursor--touch {
+  --blob-width: 84px;
+  --blob-height: 75px;
+}
+
 .blob-cursor.is-visible {
   opacity: 1;
 }
