@@ -11,22 +11,19 @@ const EMAIL = 'annygutierrezlopez@gmail.com';
 const GITHUB = 'https://github.com/annygutierrez';
 const LINKEDIN = 'https://www.linkedin.com/in/annygutierrez/';
 
-// Endless loop: the Home backgrounds take turns (one every PHOTO_SECONDS), black water comes in like the
-// tide and covers the screen, it stays black for a while (the plain contact page), then the tide goes out
-// revealing the photos again.
-const PHOTO_SECONDS = 2.8;
-const PHOTOS_SECONDS = (ACTIVE_BACKGROUNDS.length - 1) * PHOTO_SECONDS + 2.4;
-const FLOOD_SECONDS = 7;
-const BLACK_SECONDS = 4;
-const EBB_SECONDS = 6;
+// Endless loop over the Home backgrounds: a photo stays for PHOTO_SECONDS, black water comes in like the
+// tide (corner to corner) and covers the screen, it stays black for BLACK_SECONDS (the plain contact page) —
+// the photo changes then, unseen — and the tide goes out revealing the next photo.
+const PHOTO_SECONDS = 3.8;
+const FLOOD_SECONDS = 3;
+const BLACK_SECONDS = 3;
+const EBB_SECONDS = 3;
 
 const Contact = () => {
   const { t } = useLanguage();
-  // Bumped every time the screen is fully black: restarts the photo sequence (unseen, under the water).
-  const [round, setRound] = useState(0);
-  const restartPhotos = useCallback(() => setRound((r) => r + 1), []);
-  // From the second round on, the first photo is revealed as the tide goes out; the next ones follow later.
-  const lead = round === 0 ? 0 : BLACK_SECONDS + EBB_SECONDS;
+  const [photo, setPhoto] = useState(0);
+  const nextPhoto = useCallback(() => setPhoto((i) => (i + 1) % ACTIVE_BACKGROUNDS.length), []);
+  const bg = ACTIVE_BACKGROUNDS[photo];
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -35,26 +32,16 @@ const Contact = () => {
   return (
     <main className="contact">
       <div className="contact__intro" aria-hidden="true">
-        <div className="contact__bg" key={round}>
-          {ACTIVE_BACKGROUNDS.map((bg, i) => (
-            <div
-              key={bg.src}
-              className="contact__bg-layer"
-              style={{
-                backgroundImage: `url(${bg.src})`,
-                backgroundPosition: bg.position,
-                animationDelay: i === 0 ? undefined : `${lead + i * PHOTO_SECONDS}s`,
-              }}
-            />
-          ))}
+        <div className="contact__bg" key={photo}>
+          <div className="contact__bg-layer" style={{ backgroundImage: `url(${bg.src})`, backgroundPosition: bg.position }} />
         </div>
         <WaterFill
           className="contact__water"
-          wait={PHOTOS_SECONDS}
+          wait={PHOTO_SECONDS}
           flood={FLOOD_SECONDS}
           hold={BLACK_SECONDS}
           ebb={EBB_SECONDS}
-          onCovered={restartPhotos}
+          onCovered={nextPhoto}
         />
       </div>
 

@@ -24,7 +24,7 @@
   position: absolute;
   inset: 0;
   transform-origin: 60% 45%;
-  animation: contact-camera 16s ease-in-out forwards;
+  animation: contact-camera 18s ease-out forwards;
 }
 
 /* Dark veil so the white text stays readable over the photos. */
@@ -41,21 +41,11 @@
   background-size: cover;
 }
 
-/* Every photo after the first fades in on top of the previous one, at its own delay (set inline). */
-.contact__bg-layer + .contact__bg-layer {
-  opacity: 0;
-  animation: contact-photo-in 0.9s ease forwards;
-}
-
 .contact__water {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-}
-
-@keyframes contact-photo-in {
-  to { opacity: 1; }
 }
 
 @keyframes contact-camera {
