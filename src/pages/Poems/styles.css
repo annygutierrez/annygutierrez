@@ -1,0 +1,123 @@
+.poems {
+  --poems-text: #3d3d3d;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(4rem, 10vh, 6.25rem) clamp(1.5rem, 9vw, 9.5rem) clamp(2rem, 8vh, 5rem);
+  background: #fff;
+  color: var(--poems-text);
+  font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.poems__heading {
+  margin: 0;
+  font-size: clamp(2.25rem, 3.2vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Language menu: same top-right spot as on the other pages. */
+.poems__lang {
+  --lang-color: var(--poems-text);
+  --lang-menu-bg: rgba(255, 255, 255, 0.95);
+
+  position: absolute;
+  top: clamp(1.5rem, 5.5vh, 3rem);
+  right: clamp(1.5rem, 4vw, 4rem);
+  z-index: 2;
+}
+
+.poems__lang .lang__menu {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* One poem: text on the left, images on the right. */
+.poem {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 7.5rem);
+  margin: clamp(4rem, 17vh, 10.5rem) 0 4rem clamp(0rem, 16vw, 17rem);
+}
+
+.poem__title {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 3.5rem;
+  font-size: clamp(2.25rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+/* Translucent yellow stroke on top of the title (the letters underneath turn olive, like a real highlighter). */
+.poem__highlight {
+  position: absolute;
+  top: -1.05em;
+  left: -1.2em;
+  width: calc(100% + 1.1em);
+  height: 2.95em;
+  fill: rgba(242, 230, 90, 0.45);
+  pointer-events: none;
+}
+
+.poem__lines {
+  margin: 0;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.9;
+}
+
+.poem__line {
+  display: block;
+}
+
+.poem__images {
+  display: flex;
+  flex-shrink: 0;
+  gap: clamp(0.75rem, 1.6vw, 1.75rem);
+}
+
+.poem__image {
+  display: block;
+  width: clamp(7rem, 10.5vw, 11rem);
+  height: auto;
+}
+
+.poems__home {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--poems-text);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.poems__home:hover {
+  color: var(--poems-text);
+  text-decoration: none;
+}
+
+/* Narrow screens: poem text first, flowers below. */
+@media (max-width: 900px) {
+  .poem {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  /* Keep the highlighter stroke (which starts left of the title) inside the screen. */
+  .poem__text {
+    padding-left: 2.5rem;
+  }
+
+  .poem__images {
+    align-self: center;
+  }
+
+  .poem__image {
+    width: clamp(5.5rem, 27vw, 8rem);
+  }
+}

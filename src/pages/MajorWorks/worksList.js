@@ -19,7 +19,7 @@ export const WORKS = [
     text: {
       es: {
         name: 'Migración de app de banca móvil',
-        client: 'Banco de Crédito del Perú',
+        client: 'Banco de Crédito del Perú 2025 - 2026',
         title: 'Migración App Banca Móvil',
         description:
           'Mi trabajo consistió en definir lineamientos, revisar calidad de código, revisión de procesos y mejora constante de librerías React Native y nativas.',

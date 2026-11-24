@@ -1,0 +1,105 @@
+.stories {
+  --stories-text: #3d3d3d;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(4rem, 10vh, 6.25rem) clamp(1.5rem, 9vw, 9.5rem) clamp(2rem, 8vh, 5rem);
+  background: #fff;
+  color: var(--stories-text);
+  font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.stories__heading {
+  margin: 0;
+  font-size: clamp(2.25rem, 3.2vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Language menu: same top-right spot as on the other pages. */
+.stories__lang {
+  --lang-color: var(--stories-text);
+  --lang-menu-bg: rgba(255, 255, 255, 0.95);
+
+  position: absolute;
+  top: clamp(1.5rem, 5.5vh, 3rem);
+  right: clamp(1.5rem, 4vw, 4rem);
+  z-index: 2;
+}
+
+.stories__lang .lang__menu {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* One story: text on the left, image on the right. */
+.story {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  margin: clamp(4rem, 18vh, 11rem) 0 4rem clamp(0rem, 12.5vw, 13rem);
+}
+
+.story__text {
+  max-width: 50rem;
+}
+
+.story__title {
+  margin: 0 0 1.75rem;
+  font-size: clamp(2.25rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.story__paragraph {
+  margin: 0 0 1.9em;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.9;
+}
+
+.story__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.story__line {
+  display: block;
+}
+
+.story__image {
+  display: block;
+  flex-shrink: 0;
+  width: clamp(8rem, 11vw, 12rem);
+  height: auto;
+}
+
+.stories__home {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--stories-text);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.stories__home:hover {
+  color: var(--stories-text);
+  text-decoration: none;
+}
+
+/* Narrow screens: story text first, image below. */
+@media (max-width: 900px) {
+  .story {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .story__image {
+    align-self: center;
+    width: clamp(7rem, 35vw, 10rem);
+  }
+}

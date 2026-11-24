@@ -19,16 +19,32 @@
   position: relative;
 }
 
-/* Background photo with a slow "Ken Burns" camera move (zoom + pan), so it feels like footage. */
+/* Background photos with a slow "Ken Burns" camera move (zoom + pan), so it feels like footage.
+   The move is on the wrapper, so both photos stay in sync. */
 .home__bg {
   position: absolute;
   inset: 0;
   z-index: -3;
-  background-size: cover;
-  background-position: center;
   transform-origin: 60% 45%;
   will-change: transform;
   animation: home-camera 20s ease-in-out infinite alternate;
+}
+
+.home__bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Per-kind photos (art, writing…): fade in while an item of that kind is hovered. */
+.home__bg-layer--hover {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.home__bg-layer--hover.is-visible {
+  opacity: 1;
 }
 
 @keyframes home-camera {
@@ -132,6 +148,10 @@
 
 .home__make {
   cursor: default;
+  /* Links in the list look like the other items (only the hover effect gives them away). */
+  font-weight: inherit;
+  /* Keep each item on one line (e.g. "micro-stories" shouldn't break at the hyphen). */
+  white-space: nowrap;
 }
 
 /* While hovering the list, dim everything (commas included) except the item under the cursor. */

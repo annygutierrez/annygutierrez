@@ -1,30 +1,35 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 import { useLanguage } from '../../i18n/LanguageContext';
-import workshopBg from '../../assets/home-bg.jpg';
-import studioBg from '../../assets/home-bg-studio.jpg';
+import { BACKGROUND, KIND_BACKGROUNDS } from './backgrounds';
 import './styles.css';
 
-// Available backgrounds. `position` is the CSS background-position: which part of the photo stays
-// in view when the screen crops it (e.g. a portrait photo on a landscape screen).
-const BACKGROUNDS = {
-  workshop: { src: workshopBg, position: 'center' },
-  studio: { src: studioBg, position: 'center 70%' },
-};
-const BACKGROUND = BACKGROUNDS.studio;
+// Each item in home.makes, in the same order as in src/i18n/translations.js:
+// websites, mobile apps, mobile games, steam games, drawings, robots, paintings, music, poems, micro-stories.
+// `kind` picks the hover background; `to` makes the item a link to that page.
+const MAKE_META = [
+  { kind: 'tech' },
+  { kind: 'tech' },
+  { kind: 'tech' },
+  { kind: 'tech' },
+  { kind: 'art' },
+  { kind: 'tech' },
+  { kind: 'art' },
+  { kind: 'art' },
+  { kind: 'writing', to: '/poems' },
+  { kind: 'writing', to: '/micro-stories' },
+];
 
-// TODO: point these to their real destinations.
-const LINKS = {
-  aboutMe: '#',
-  contact: '#',
-};
+const bgStyle = (bg) => ({ backgroundImage: `url(${bg.src})`, backgroundPosition: bg.position });
 
 // The title and the list of things Anny makes are translated in src/i18n/translations.js (home.*).
 const Home = () => {
   const { t } = useLanguage();
   const makes = t('home.makes');
+  // Kind of the hovered item, if it has its own background.
+  const [hoverKind, setHoverKind] = useState(null);
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -32,27 +37,42 @@ const Home = () => {
 
   return (
     <main className="home">
-      <div
-        className="home__bg"
-        style={{ backgroundImage: `url(${BACKGROUND.src})`, backgroundPosition: BACKGROUND.position }}
-        aria-hidden="true"
-      />
+      <div className="home__bg" aria-hidden="true">
+        <div className="home__bg-layer" style={bgStyle(BACKGROUND)} />
+        {Object.entries(KIND_BACKGROUNDS).map(([kind, bg]) => (
+          <div
+            key={kind}
+            className={`home__bg-layer home__bg-layer--hover${hoverKind === kind ? ' is-visible' : ''}`}
+            style={bgStyle(bg)}
+          />
+        ))}
+      </div>
       <div className="home__light" aria-hidden="true" />
       <div className="home__top">
         <LanguageSwitcher />
-        <a className="home__contact" href={LINKS.contact}>{t('nav.contact')}</a>
+        <Link className="home__contact" to="/contact">{t('nav.contact')}</Link>
       </div>
 
       <section className="home__content">
         <h1 className="home__title">{t('home.title')}</h1>
 
         <p className="home__makes">
-          {makes.map((item, i) => (
-            <React.Fragment key={item}>
-              <span className="home__make">{item}</span>
-              {i < makes.length - 1 && ', '}
-            </React.Fragment>
-          ))}
+          {makes.map((item, i) => {
+            const { kind, to } = MAKE_META[i] || {};
+            const hoverProps = KIND_BACKGROUNDS[kind]
+              ? { onMouseEnter: () => setHoverKind(kind), onMouseLeave: () => setHoverKind(null) }
+              : {};
+            return (
+              <React.Fragment key={item}>
+                {to ? (
+                  <Link className="home__make home__make--link" to={to} {...hoverProps}>{item}</Link>
+                ) : (
+                  <span className="home__make" {...hoverProps}>{item}</span>
+                )}
+                {i < makes.length - 1 && ', '}
+              </React.Fragment>
+            );
+          })}
         </p>
 
         <Link className="home__works" to="/major-works">
@@ -64,7 +84,7 @@ const Home = () => {
         </Link>
       </section>
 
-      <a className="home__about" href={LINKS.aboutMe}>{t('nav.aboutMe')}</a>
+      <Link className="home__about" to="/about-me">{t('nav.aboutMe')}</Link>
     </main>
   );
 };
